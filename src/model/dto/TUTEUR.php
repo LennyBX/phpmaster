@@ -12,7 +12,7 @@ class TUTEUR
     private $TEL_TUT;
     private $LOG_TUT;
     private $MDP_TUT;
-    private $IDN_TUT;
+    private $ID_NOT_TUT;
 
     /**
      * @param $ID_TUT
@@ -21,7 +21,7 @@ class TUTEUR
      * @param $TEL_TUT
      * @param $LOG_TUT
      * @param $MDP_TUT
-     * @param $IDN_TUT
+     * @param $ID_NOT_TUT
      */
     public function __construct($tab)
     {
@@ -31,7 +31,7 @@ class TUTEUR
         $this->TEL_TUT = $tab['$TEL_TUT'];
         $this->LOG_TUT = $tab['$LOG_TUT'];
         $this->MDP_TUT = $tab['$MDP_TUT'];
-        $this->IDN_TUT = $tab['$IDN_TUT'];
+        $this->ID_NOT_TUT = $tab['$ID_NOT_TUT'];
     }
 
     /**
@@ -133,17 +133,17 @@ class TUTEUR
     /**
      * @return mixed
      */
-    public function getIDNTUT()
+    public function getIDNOTTUT()
     {
-        return $this->IDN_TUT;
+        return $this->ID_NOT_TUT;
     }
 
     /**
-     * @param mixed $IDN_TUT
+     * @param mixed $ID_NOT_TUT
      */
-    public function setIDNTUT($IDN_TUT): void
+    public function setIDNOTTUT($ID_NOT_TUT): void
     {
-        $this->IDN_TUT = $IDN_TUT;
+        $this->ID_NOT_TUT = $ID_NOT_TUT;
     }
 
 }

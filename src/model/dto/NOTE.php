@@ -9,32 +9,32 @@ class NOTE
     private $ID_NOT;
     private $REM_NOT;
     private $DAT_NOT;
-    private $NOO_NOT;
-    private $NOD_NOT;
-    private $NDF_NOT;
-    private $NOF_NOT;
-    private $NOE_NOT;
+    private $NOT_ORA_NOT;
+    private $NOT_DOS_NOT;
+    private $NOT_DOS_FIN_NOT;
+    private $NOT_ORA_FIN_NOT;
+    private $NOT_ENT_NOT;
 
     /**
      * @param $ID_NOT
      * @param $REM_NOT
      * @param $DAT_NOT
-     * @param $NOO_NOT
-     * @param $NOD_NOT
-     * @param $NDF_NOT
-     * @param $NOF_NOT
-     * @param $NOE_NOT
+     * @param $NOT_ORA_NOT
+     * @param $NOT_DOS_NOT
+     * @param $NOT_DOS_FIN_NOT
+     * @param $NOT_ORA_FIN_NOT
+     * @param $NOT_ENT_NOT
      */
     public function __construct($tab)
     {
         $this->ID_NOT = $tab['ID_NOT'];
         $this->REM_NOT = $tab['REM_NOT'];
         $this->DAT_NOT = $tab['DAT_NOT'];
-        $this->NOO_NOT = $tab['NOO_NOT'];
-        $this->NOD_NOT = $tab['NOD_NOT'];
-        $this->NDF_NOT = $tab['NDF_NOT'];
-        $this->NOF_NOT = $tab['NOF_NOT'];
-        $this->NOE_NOT = $tab['NOE_NOT'];
+        $this->NOT_ORA_NOT = $tab['NOT_ORA_NOT'];
+        $this->NOT_DOS_NOT = $tab['NOT_DOS_NOT'];
+        $this->NOT_DOS_FIN_NOT = $tab['NOT_DOS_FIN_NOT'];
+        $this->NOT_ORA_FIN_NOT = $tab['NOT_ORA_FIN_NOT'];
+        $this->NOT_ENT_NOT = $tab['NOT_ENT_NOT'];
     }
 
     /**
@@ -88,81 +88,81 @@ class NOTE
     /**
      * @return mixed
      */
-    public function getNOONOT()
+    public function getNOTORANOT()
     {
-        return $this->NOO_NOT;
+        return $this->NOT_ORA_NOT;
     }
 
     /**
-     * @param mixed $NOO_NOT
+     * @param mixed $NOT_ORA_NOT
      */
-    public function setNOONOT($NOO_NOT): void
+    public function setNOTORANOT($NOT_ORA_NOT): void
     {
-        $this->NOO_NOT = $NOO_NOT;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getNODNOT()
-    {
-        return $this->NOD_NOT;
-    }
-
-    /**
-     * @param mixed $NOD_NOT
-     */
-    public function setNODNOT($NOD_NOT): void
-    {
-        $this->NOD_NOT = $NOD_NOT;
+        $this->NOT_ORA_NOT = $NOT_ORA_NOT;
     }
 
     /**
      * @return mixed
      */
-    public function getNDFNOT()
+    public function getNOTDOSNOT()
     {
-        return $this->NDF_NOT;
+        return $this->NOT_DOS_NOT;
     }
 
     /**
-     * @param mixed $NDF_NOT
+     * @param mixed $NOT_DOS_NOT
      */
-    public function setNDFNOT($NDF_NOT): void
+    public function setNOTDOSNOT($NOT_DOS_NOT): void
     {
-        $this->NDF_NOT = $NDF_NOT;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getNOFNOT()
-    {
-        return $this->NOF_NOT;
-    }
-
-    /**
-     * @param mixed $NOF_NOT
-     */
-    public function setNOFNOT($NOF_NOT): void
-    {
-        $this->NOF_NOT = $NOF_NOT;
+        $this->NOT_DOS_NOT = $NOT_DOS_NOT;
     }
 
     /**
      * @return mixed
      */
-    public function getNOENOT()
+    public function getNOTDOSFINNOT()
     {
-        return $this->NOE_NOT;
+        return $this->NOT_DOS_FIN_NOT;
     }
 
     /**
-     * @param mixed $NOE_NOT
+     * @param mixed $NOT_DOS_FIN_NOT
      */
-    public function setNOENOT($NOE_NOT): void
+    public function setNOTDOSFINNOT($NOT_DOS_FIN_NOT): void
     {
-        $this->NOE_NOT = $NOE_NOT;
+        $this->NOT_DOS_FIN_NOT = $NOT_DOS_FIN_NOT;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNOTORAFINNOT()
+    {
+        return $this->NOT_ORA_FIN_NOT;
+    }
+
+    /**
+     * @param mixed $NOT_ORA_FIN_NOT
+     */
+    public function setNOTORAFINNOT($NOT_ORA_FIN_NOT): void
+    {
+        $this->NOT_ORA_FIN_NOT = $NOT_ORA_FIN_NOT;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNOTENTNOT()
+    {
+        return $this->NOT_ENT_NOT;
+    }
+
+    /**
+     * @param mixed $NOT_ENT_NOT
+     */
+    public function setNOTENTNOT($NOT_ENT_NOT): void
+    {
+        $this->NOT_ENT_NOT = $NOT_ENT_NOT;
     }
 
 }

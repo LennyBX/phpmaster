@@ -6,41 +6,42 @@ namespace models\dto;
 class ENTREPRISE
 {
 
+    // MDS = Maître de stage //
     private $ID_ENT;
     private $LIB_ENT;
-    private $NOM_ENT;
-    private $PRE_ENT;
+    private $NOM_MDS_ENT;
+    private $PRE_MDS_ENT;
     private $CP_ENT;
     private $VIL_ENT;
     private $RUE_ENT;
-    private $NUM_ENT;
-    private $TEL_ENT;
-    private $MAI_ENT;
+    private $NUM_RUE_ENT;
+    private $TEL_MDS_ENT;
+    private $MAI_MDS_ENT;
 
     /**
      * @param $ID_ENT
      * @param $LIB_ENT
-     * @param $NOM_ENT
-     * @param $PRE_ENT
+     * @param $NOM_MDS_ENT
+     * @param $PRE_MDS_ENT
      * @param $CP_ENT
      * @param $VIL_ENT
      * @param $RUE_ENT
-     * @param $NUM_ENT
-     * @param $TEL_ENT
-     * @param $MAI_ENT
+     * @param $NUM_RUE_ENT
+     * @param $TEL_MDS_ENT
+     * @param $MAI_MDS_ENT
      */
     public function __construct($tab)
     {
         $this->ID_ENT = $tab['ID_ENT'];
         $this->LIB_ENT = $tab['LIB_ENT'];
-        $this->NOM_ENT = $tab['NOM_ENT'];
-        $this->PRE_ENT = $tab['PRE_ENT'];
+        $this->NOM_MDS_ENT = $tab['NOM_MDS_ENT'];
+        $this->PRE_MDS_ENT = $tab['PRE_MDS_ENT'];
         $this->CP_ENT = $tab['CP_ENT'];
         $this->VIL_ENT = $tab['VIL_ENT'];
         $this->RUE_ENT = $tab['RUE_ENT'];
-        $this->NUM_ENT = $tab['NUM_ENT'];
-        $this->TEL_ENT = $tab['TEL_ENT'];
-        $this->MAI_ENT = $tab['MAI_ENT'];
+        $this->NUM_RUE_ENT = $tab['NUM_RUE_ENT'];
+        $this->TEL_MDS_ENT = $tab['TEL_MDS_ENT'];
+        $this->MAI_MDS_ENT = $tab['MAI_MDS_ENT'];
     }
 
     /**
@@ -78,33 +79,33 @@ class ENTREPRISE
     /**
      * @return mixed
      */
-    public function getNOMENT()
+    public function getNOMMDSENT()
     {
-        return $this->NOM_ENT;
+        return $this->NOM_MDS_ENT;
     }
 
     /**
-     * @param mixed $NOM_ENT
+     * @param mixed $NOM_MDS_ENT
      */
-    public function setNOMENT($NOM_ENT): void
+    public function setNOMMDSENT($NOM_MDS_ENT): void
     {
-        $this->NOM_ENT = $NOM_ENT;
+        $this->NOM_MDS_ENT = $NOM_MDS_ENT;
     }
 
     /**
      * @return mixed
      */
-    public function getPREENT()
+    public function getPREMDSENT()
     {
-        return $this->PRE_ENT;
+        return $this->PRE_MDS_ENT;
     }
 
     /**
-     * @param mixed $PRE_ENT
+     * @param mixed $PRE_MDS_ENT
      */
-    public function setPREENT($PRE_ENT): void
+    public function setPREMDSENT($PRE_MDS_ENT): void
     {
-        $this->PRE_ENT = $PRE_ENT;
+        $this->PRE_MDS_ENT = $PRE_MDS_ENT;
     }
 
     /**
@@ -158,33 +159,33 @@ class ENTREPRISE
     /**
      * @return mixed
      */
-    public function getNUMENT()
+    public function getNUMRUEENT()
     {
-        return $this->NUM_ENT;
+        return $this->NUM_RUE_ENT;
     }
 
     /**
-     * @param mixed $NUM_ENT
+     * @param mixed $NUM_RUE_ENT
      */
-    public function setNUMENT($NUM_ENT): void
+    public function setNUMRUEENT($NUM_RUE_ENT): void
     {
-        $this->NUM_ENT = $NUM_ENT;
+        $this->NUM_RUE_ENT = $NUM_RUE_ENT;
     }
 
     /**
      * @return mixed
      */
-    public function getTELENT()
+    public function getTELMDSENT()
     {
-        return $this->TEL_ENT;
+        return $this->TEL_MDS_ENT;
     }
 
     /**
-     * @param mixed $TEL_ENT
+     * @param mixed $TEL_MDS_ENT
      */
-    public function setTELENT($TEL_ENT): void
+    public function setTELMDSENT($TEL_MDS_ENT): void
     {
-        $this->TEL_ENT = $TEL_ENT;
+        $this->TEL_MDS_ENT = $TEL_MDS_ENT;
     }
 
     /**
@@ -192,15 +193,15 @@ class ENTREPRISE
      */
     public function getMAIENT()
     {
-        return $this->MAI_ENT;
+        return $this->MAI_MDS_ENT;
     }
 
     /**
-     * @param mixed $MAI_ENT
+     * @param mixed $MAI_MDS_ENT
      */
-    public function setMAIENT($MAI_ENT): void
+    public function setMAIMDSENT($MAI_MDS_ENT): void
     {
-        $this->MAI_ENT = $MAI_ENT;
+        $this->MAI_MDS_ENT = $MAI_MDS_ENT;
     }
 
 }

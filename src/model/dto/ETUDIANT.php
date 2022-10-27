@@ -16,12 +16,12 @@ class ETUDIANT
     private $CP_ETU;
     private $RUE_ETU;
     private $VIL_ETU;
-    private $NUM_ETU;
+    private $NUM_RUE_ETU;
     private $MAI_ETU;
     private $TEL_ETU;
-    private $IDE_ETU;
-    private $IDN_ETU;
-    private $IDT_ETU;
+    private $ID_ENT_ETU;
+    private $ID_NOT_ETU;
+    private $ID_TUT_ETU;
 
     /**
      * @param $ID_ETU
@@ -34,12 +34,12 @@ class ETUDIANT
      * @param $CP_ETU
      * @param $RUE_ETU
      * @param $VIL_ETU
-     * @param $NUM_ETU
+     * @param $NUM_RUE_ETU
      * @param $MAI_ETU
      * @param $TEL_ETU
-     * @param $IDE_ETU
-     * @param $IDN_ETU
-     * @param $IDT_ETU
+     * @param $ID_ENT_ETU
+     * @param $ID_NOT_ETU
+     * @param $ID_TUT_ETU
      */
     public function __construct($tab)
     {
@@ -53,12 +53,12 @@ class ETUDIANT
         $this->CP_ETU = $tab['CP_ETU'];
         $this->RUE_ETU = $tab['RUE_ETU'];
         $this->VIL_ETU = $tab['VIL_ETU'];
-        $this->NUM_ETU = $tab['NUM_ETU'];
+        $this->NUM_RUE_ETU = $tab['NUM_RUE_ETU'];
         $this->MAI_ETU = $tab['MAI_ETU'];
         $this->TEL_ETU = $tab['TEL_ETU'];
-        $this->IDE_ETU = $tab['IDE_ETU'];
-        $this->IDN_ETU = $tab['IDN_ETU'];
-        $this->IDT_ETU = $tab['IDT_ETU'];
+        $this->ID_ENT_ETU = $tab['ID_ENT_ETU'];
+        $this->ID_NOT_ETU = $tab['ID_NOT_ETU'];
+        $this->ID_TUT_ETU = $tab['ID_TUT_ETU'];
     }
 
     /**
@@ -224,17 +224,17 @@ class ETUDIANT
     /**
      * @return mixed
      */
-    public function getNUMETU()
+    public function getNUMRUEETU()
     {
-        return $this->NUM_ETU;
+        return $this->NUM_RUE_ETU;
     }
 
     /**
-     * @param mixed $NUM_ETU
+     * @param mixed $NUM_RUE_ETU
      */
-    public function setNUMETU($NUM_ETU)
+    public function setNUMRUEETU($NUM_RUE_ETU)
     {
-        $this->NUM_ETU = $NUM_ETU;
+        $this->NUM_RUE_ETU = $NUM_RUE_ETU;
     }
 
     /**
@@ -272,49 +272,49 @@ class ETUDIANT
     /**
      * @return mixed
      */
-    public function getIDEETU()
+    public function getIDENTETU()
     {
-        return $this->IDE_ETU;
+        return $this->ID_ENT_ETU;
     }
 
     /**
-     * @param mixed $IDE_ETU
+     * @param mixed $ID_ENT_ETU
      */
-    public function setIDEETU($IDE_ETU)
+    public function setIDENTETU($ID_ENT_ETU)
     {
-        $this->IDE_ETU = $IDE_ETU;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getIDTNTU()
-    {
-        return $this->IDN_ETU;
-    }
-
-    /**
-     * @param mixed $IDN_ETU
-     */
-    public function setIDNETU($IDN_ETU)
-    {
-        $this->IDN_ETU = $IDN_ETU;
+        $this->ID_ENT_ETU = $ID_ENT_ETU;
     }
 
     /**
      * @return mixed
      */
-    public function getIDTETU()
+    public function getIDNOTETU()
     {
-        return $this->IDT_ETU;
+        return $this->ID_NOT_ETU;
     }
 
     /**
-     * @param mixed $IDT_ETU
+     * @param mixed $ID_NOT_ETU
      */
-    public function setIDTETU($IDT_ETU)
+    public function setIDNOTETU($ID_NOT_ETU)
     {
-        $this->IDT_ETU = $IDT_ETU;
+        $this->ID_NOT_ETU = $ID_NOT_ETU;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIDTUTETU()
+    {
+        return $this->ID_TUT_ETU;
+    }
+
+    /**
+     * @param mixed $ID_TUT_ETU
+     */
+    public function setIDTUTETU($ID_TUT_ETU)
+    {
+        $this->ID_TUT_ETU = $ID_TUT_ETU;
     }
 
 
