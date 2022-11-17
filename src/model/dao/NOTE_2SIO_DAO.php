@@ -1,8 +1,8 @@
 <?php
 
-namespace models\dao;
+namespace model\dao;
 
-use models\dto\NOTE;
+use model\dto\NOTE;
 
 class NOTE_2SIO_DAO
 {

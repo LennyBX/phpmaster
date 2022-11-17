@@ -19,7 +19,7 @@
 <body>
 
 <nav class="NavbarItems">
-    <img  class="navbar-logo" src="images/FSI_logo.png">
+    <img  class="navbar-logo" src="../../public/img/FSI_logo.png">
     <ul class="nav-menu">
         <li>
             <a  class="nav-link" href="A.html"><i class="fa-solid fa-house-user"></i>
@@ -60,7 +60,7 @@
             <!-- # 1 eleves  -->
             <td>
                 <div class="d-flex align-items-center">
-                    <img src="images/etudiant-removebg.png" alt="" style="width: 45px; height: 45px" class="rounded-circle"
+                    <img src="../../public/img/etudiant-removebg.png" alt="" style="width: 45px; height: 45px" class="rounded-circle"
                     />
                     <div class="ms-3">
                         <p class="fw-bold mb-1">John Doe</p>
@@ -96,7 +96,7 @@
 
     </table>
     <footer class="Footeritems">
-        <img  class="footer-logo" src="images/FSI_logo.png">
+        <img  class="footer-logo" src="../../public/img/FSI_logo.png">
         <ul class="footer-menu">
             <li>
                 <a  class="nav-link" href="A.html"><i class="fa-solid fa-house-user"></i>

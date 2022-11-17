@@ -1,7 +1,9 @@
 <?php
 
 
-namespace models\dto;
+namespace model\dto;
+
+use model\dao\ETUDIANT_2SIO_DAO;
 
 
 class ETUDIANT

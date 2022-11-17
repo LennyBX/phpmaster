@@ -1,5 +1,6 @@
 <?php
 
+// Définition des chemins:
 define('BASE_DIR', dirname(dirname(__FILE__)));	 // Le dossier de l'application
 define('PUBLIC_DIR', BASE_DIR . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR);    //  Pour les fichiers publics
 define('CONFIG_DIR', BASE_DIR . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR);    //  Pour les fichiers de configuration

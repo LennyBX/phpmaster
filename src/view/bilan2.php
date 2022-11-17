@@ -19,7 +19,7 @@
 <body>
 
 <nav class="NavbarItems">
-    <img  class="navbar-logo" src="images/FSI_logo.png">
+    <img  class="navbar-logo" src="../../public/img/FSI_logo.png">
     <ul class="nav-menu">
         <li>
             <a  class="nav-link" href="A.html"><i class="fa-solid fa-house-user"></i>
@@ -45,14 +45,11 @@
         <thead class="bg-light">
         <tr>
             <th>Nom</th>
-            <th>Specialiter </th>
-            <th>TEL</th>
-            <th>Sa classe</th>
-            <th>Entreprise</th>
-            <th>Sujet d'analyse</th>
+            <th>La date du bilan 2</th>
+            <th> La note du dossier</th>
+            <th>La note d’oral </th>
+            <th>Des remarques éventuelles</th>
             <th>Editer</th>
-            <th>Bilan 1 </th>
-            <th>Bilan 2</th>
         </tr>
         </thead>
         <tbody>
@@ -62,7 +59,7 @@
             <!-- # 1 eleves  -->
             <td>
                 <div class="d-flex align-items-center">
-                    <img src="images/etudiant-removebg.png" alt="" style="width: 45px; height: 45px" class="rounded-circle"
+                    <img src="../../public/img/etudiant-removebg.png" alt="" style="width: 45px; height: 45px" class="rounded-circle"
                     />
                     <div class="ms-3">
                         <p class="fw-bold mb-1">John Doe</p>
@@ -71,46 +68,31 @@
                 </div>
             </td>
             <td>
-                <p class="fw-normal mb-1">Cybersecuriter</p>
+                <span class="badge badge-success rounded-pill d-inline">04/04/2000</span>
+
             </td>
             <td>
-                <span class="badge badge-success rounded-pill d-inline">06.09.08.32.22</span>
+                <p class="fw-normal mb-1">10</p>
             </td>
-            <td>1 er année</td>
 
 
             <td>
-                <p class="fw-normal mb-1">o Le nom de l’entreprise</p>
-                <p class="fw-normal mb-1">o L’adresse complète</p>
-                <p class="fw-normal mb-1">o Le nom et prénom du maitre d’apprentissage</p>
-                <p class="fw-normal mb-1">o Le téléphone et mail du maitre d’apprentissage</p>
+                <p class="fw-normal mb-1">10</p>
             </td>
             <td>
-                <p class="fw-normal mb-1">Cybersecuriter</p>
+                <p class="fw-normal mb-1">Citer les remarques éventuelles</p>
             </td>
             <td>
                 <button type="button" class="btn btn-link btn-sm btn-rounded">
                     Edit
                 </button>
             </td>
-            <td>
-                <button type="button" class="btn btn-link btn-sm btn-rounded">
-                    Afficher le bilan 1
-                </button>
-            </td>
-
-            <td>
-                <button type="button" class="btn btn-link btn-sm btn-rounded">
-                    Afficher le bilan 2
-                </button>
-            </td>
         </tr>
 
 
     </table>
-
     <footer class="Footeritems">
-        <img  class="footer-logo" src="images/FSI_logo.png">
+        <img  class="footer-logo" src="../../public/img/FSI_logo.png">
         <ul class="footer-menu">
             <li>
                 <a  class="nav-link" href="A.html"><i class="fa-solid fa-house-user"></i>
@@ -119,6 +101,5 @@
 
         </ul>
     </footer>
-
 </body>
 </html>

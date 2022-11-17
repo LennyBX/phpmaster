@@ -12,14 +12,14 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet"/>
-    <link href="/public/css/main.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e3c4ffb28a.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
 
 <nav class="NavbarItems">
-    <img  class="navbar-logo" src="images/FSI_logo.png">
+    <img  class="navbar-logo" src="../../public/img/FSI_logo.png">
     <ul class="nav-menu">
         <li>
             <a  class="nav-link" href="A.html"><i class="fa-solid fa-house-user"></i>
@@ -45,11 +45,11 @@
         <thead class="bg-light">
         <tr>
             <th>Nom</th>
-            <th>Specialiter </th>
+            <th>Nombre d’étudiant max en 3 / 4 / 5 OLEN  </th>
             <th>TEL</th>
-            <th>Sa classe</th>
+            <th>Ajouter un eleve</th>
             <th>Editer</th>
-            <th>+ infos</th>
+            <th>Suprimmer</th>
         </tr>
         </thead>
         <tbody>
@@ -59,7 +59,7 @@
             <!-- # 1 eleves  -->
             <td>
                 <div class="d-flex align-items-center">
-                    <img src="images/etudiant-removebg.png" alt="" style="width: 45px; height: 45px" class="rounded-circle"
+                    <img src="../../public/img/etudiant-removebg.png" alt="" style="width: 45px; height: 45px" class="rounded-circle"
                     />
                     <div class="ms-3">
                         <p class="fw-bold mb-1">John Doe</p>
@@ -68,12 +68,16 @@
                 </div>
             </td>
             <td>
-                <p class="fw-normal mb-1">Cybersecuriter</p>
+                <p class="fw-normal mb-1">10</p>
             </td>
             <td>
                 <span class="badge badge-success rounded-pill d-inline">06.09.08.32.22</span>
             </td>
-            <td>1 er année</td>
+            <td>
+                <button type="button" class="btn btn-link btn-sm btn-rounded">
+                    Pour plus d'info
+                </button>
+            </td>
 
 
             <td>
@@ -94,7 +98,7 @@
             <!-- # 1 eleves  -->
             <td>
                 <div class="d-flex align-items-center">
-                    <img src="images/etudiant-removebg.png" alt="" style="width: 45px; height: 45px" class="rounded-circle"
+                    <img src="../../public/img/etudiant-removebg.png" alt="" style="width: 45px; height: 45px" class="rounded-circle"
                     />
                     <div class="ms-3">
                         <p class="fw-bold mb-1">John Doe</p>
@@ -103,12 +107,16 @@
                 </div>
             </td>
             <td>
-                <p class="fw-normal mb-1">Cybersecuriter</p>
+                <p class="fw-normal mb-1">10</p>
             </td>
             <td>
                 <span class="badge badge-success rounded-pill d-inline">06.09.08.32.22</span>
             </td>
-            <td>1 er année</td>
+            <td>
+                <button type="button" class="btn btn-link btn-sm btn-rounded">
+                    Pour plus d'info
+                </button>
+            </td>
 
             <td>
                 <button type="button" class="btn btn-link btn-sm btn-rounded">
@@ -128,7 +136,7 @@
             <!-- # 1 eleves  -->
             <td>
                 <div class="d-flex align-items-center">
-                    <img src="images/etudiant-removebg.png" alt="" style="width: 45px; height: 45px" class="rounded-circle"
+                    <img src="../../public/img/etudiant-removebg.png" alt="" style="width: 45px; height: 45px" class="rounded-circle"
                     />
                     <div class="ms-3">
                         <p class="fw-bold mb-1">John Doe</p>
@@ -137,12 +145,16 @@
                 </div>
             </td>
             <td>
-                <p class="fw-normal mb-1">Cybersecuriter</p>
+                <p class="fw-normal mb-1">10</p>
             </td>
             <td>
                 <span class="badge badge-success rounded-pill d-inline">06.09.08.32.22</span>
             </td>
-            <td>1 er année</td>
+            <td>
+                <button type="button" class="btn btn-link btn-sm btn-rounded">
+                    Pour plus d'info
+                </button>
+            </td>
 
             <td>
                 <button type="button" class="btn btn-link btn-sm btn-rounded">
@@ -160,7 +172,7 @@
         <!-- # 2 eleves  -->
         <td>
             <div class="d-flex align-items-center">
-                <img src="images/etudiant-removebg.png" alt="" style="width: 45px; height: 45px" class="rounded-circle"
+                <img src="../../public/img/etudiant-removebg.png" alt="" style="width: 45px; height: 45px" class="rounded-circle"
                 />
                 <div class="ms-3">
                     <p class="fw-bold mb-1">John Doe</p>
@@ -169,12 +181,16 @@
             </div>
         </td>
         <td>
-            <p class="fw-normal mb-1">Cybersecuriter</p>
+            <p class="fw-normal mb-1">10</p>
         </td>
         <td>
             <span class="badge badge-success rounded-pill d-inline">06.09.08.32.22</span>
         </td>
-        <td>1 er année</td>
+        <td>
+            <button type="button" class="btn btn-link btn-sm btn-rounded">
+                Pour plus d'info
+            </button>
+        </td>
 
 
         <td>
@@ -193,7 +209,7 @@
         <!-- # 3 eleves  -->
         <td>
             <div class="d-flex align-items-center">
-                <img src="images/etudiant-removebg.png" alt="" style="width: 45px; height: 45px" class="rounded-circle"
+                <img src="../../public/img/etudiant-removebg.png" alt="" style="width: 45px; height: 45px" class="rounded-circle"
                 />
                 <div class="ms-3">
                     <p class="fw-bold mb-1">John Doe</p>
@@ -202,12 +218,16 @@
             </div>
         </td>
         <td>
-            <p class="fw-normal mb-1">Cybersecuriter</p>
+            <p class="fw-normal mb-1">10</p>
         </td>
         <td>
             <span class="badge badge-success rounded-pill d-inline">06.09.08.32.22</span>
         </td>
-        <td>1 er année</td>
+        <td>
+            <button type="button" class="btn btn-link btn-sm btn-rounded">
+                Pour plus d'info
+            </button>
+        </td>
 
 
         <td>
@@ -230,7 +250,7 @@
 
 
 <footer class="Footeritems">
-    <img  class="footer-logo" src="images/FSI_logo.png">
+    <img  class="footer-logo" src="../../public/img/FSI_logo.png">
     <ul class="footer-menu">
         <li>
             <a  class="nav-link" href="A.html"><i class="fa-solid fa-house-user"></i>

@@ -1,6 +1,6 @@
 <?php
 
-namespace models\dto;
+namespace model\dto;
 
 class DB
 {

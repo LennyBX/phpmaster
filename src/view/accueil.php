@@ -17,24 +17,23 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet"/>
-    <link href="/public/css/main.css" rel="stylesheet">
+    <link href="../../public/css/main.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e3c4ffb28a.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <nav class="NavbarItems">
-    <img  class="navbar-logo" src="images/FSI_logo.png">
+    <img  class="navbar-logo" src="../../public/img/FSI_logo.png"/>
     <ul class="nav-menu">
         <li>
-            <a  class="nav-link" href="A.html"><i class="fa-solid fa-house-user"></i>
+            <a  class="nav-link" href="../controller/accueil_control.php"><i class="fa-solid fa-house-user"></i>
                 Accueil
             </a>
         <li>
-            <a  class="nav-link" href="L.html"><i class="fa-solid fa-list"></i>
+            <a  class="nav-link" href="../controller/liste_etudiants_control.php"><i class="fa-solid fa-list"></i>
                 Liste Etudiant
             </a>
         </li>
-
         <li>
             <a class="nav-link" href="/"><i class="fa-solid fa-right-to-bracket"></i>
                 Deconnexion
@@ -47,39 +46,39 @@
 
     <div class="card">
         <div class="imgBX">
-            <img src="images/194935.png">
+            <img src="../../public/img/194935.png"/>
         </div>
         <div class="content-card">
             <div class="detail-card">
-                <h2> NOM.PRENOM </h2>
+                <h2>NOM PRENOM</h2>
                 <br>
-                <span> Profession</span>
+                <span>Profession:</span>
                 <br>
-                <span> tel :</span>
+                <span>Téléphone:</span>
                 <br>
-                <span> Residence :</span>
+                <span>Résidence:</span>
             </div>
         </div>
     </div>
 
     <div class="card2">
         <div class="imgBX2">
-            <img src="images/etudiant-removebg.png">
+            <img src="../../public/img/etudiant-removebg.png"/>
         </div>
         <div class="ecris-card2">
             <H2>Ma liste D'Etudiants</H2>
         </div>
 
         <div class="content-card2">
-            <span>Voici la liste de tout les étudiant que vous avez a votre responsabilitez </span>
+            <span>Voici la liste de tous les étudiants que vous avez sous votre responsaiblité.</span>
         </div>
 
-        <a class="buttoncard2" style="--clr:#499c54" href="L.html"><span> Cliquez-ici</span></a>
+        <a class="buttoncard2" style="--clr:#499c54" href="../controller/liste_etudiants_control.php"><span> Cliquez-ici</span></a>
     </div>
 
     <div class="card3">
         <div class="imgBX3">
-            <img src="images/services-parametres-et-icone-d-engrenage-vert-removebg-preview.png">
+            <img src="../../public/img/services-parametres-et-icone-d-engrenage-vert-removebg-preview.png">
         </div>
         <div class="ecris-card3">
             <H2>Mes Parametres</H2>
@@ -94,10 +93,10 @@
 
 
 <footer class="Footeritems_2">
-    <img  class="footer-logo_2" src="images/FSI_logo.png">
+    <img  class="footer-logo_2" src="../../public/img/FSI_logo.png">
     <ul class="footer-menu_2">
         <li>
-            <a  class="nav-link" href="A.html"><i class="fa-solid fa-house-user"></i>
+            <a  class="nav-link" href="../controller/mentions_legales_control.php"><i class="fa-solid fa-house-user"></i>
                 Mention légales
             </a>
 
