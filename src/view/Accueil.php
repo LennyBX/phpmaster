@@ -1,113 +1,171 @@
-<?php
-?>
-<html lang="fr">
+<?php ?>
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Online Education Website Design</title>
 
+    <!-- swiper css link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
-    <title>Accueil FSI</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet"/>
-    <link href="/public/css/main.css" rel="stylesheet">
+
+    <link href="css/main.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e3c4ffb28a.js" crossorigin="anonymous"></script>
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../../public/css/style.css">
+
 </head>
 <body>
 
-<nav class="NavbarItems">
-    <img  class="navbar-logo" src="images/FSI_logo.png">
-    <ul class="nav-menu">
-        <li>
-            <a  class="nav-link" href="A.html"><i class="fa-solid fa-house-user"></i>
-                Accueil
-            </a>
-        <li>
-            <a  class="nav-link" href="L.html"><i class="fa-solid fa-list"></i>
-                Liste Etudiant
-            </a>
-        </li>
+<!-- header section starts  -->
 
-        <li>
-            <a class="nav-link" href="/"><i class="fa-solid fa-right-to-bracket"></i>
-                Deconnexion
-            </a>
-        </li>
-    </ul>
-</nav>
+<header class="header">
 
-<div class="main">
+    <section class="flex">
 
-    <div class="card">
-        <div class="imgBX">
-            <img src="images/194935.png">
+        <img src="../../public/img/FSI_logo.png" style="width: 60px">
+        <nav class="navbar">
+            <a href="index.html">Accueil</a>
+            <a href="Liste_etudiant.html">Liste Etudiant</a>
+            <a href="Admin.html">Parametre</a>
+            <a href="#teachers">Deconnexion</a>
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </section>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="row">
+
+        <div class="content">
+            <h3>FSI <span>Tutorat</span></h3>
         </div>
-        <div class="content-card">
-            <div class="detail-card">
-                <h2> NOM.PRENOM </h2>
-                <br>
-                <span> Profession</span>
-                <br>
-                <span> tel :</span>
-                <br>
-                <span> Residence :</span>
+
+        <div class="image">
+            <img src="../../public/img/homg-img.svg" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- couter section stars  -->
+
+<section class="count">
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-user-graduate"></i>
+            <div class="content">
+                <h3>1300+</h3>
+                <p>Eleves</p>
             </div>
         </div>
+
+        <div class="box">
+            <i class="fas fa-chalkboard-user"></i>
+            <div class="content">
+                <h3>80+</h3>
+                <p>Tuteurs</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-face-smile"></i>
+            <div class="content">
+                <h3>100%</h3>
+                <p>satisfaction</p>
+            </div>
+        </div>
+
     </div>
 
-    <div class="card2">
-        <div class="imgBX2">
-            <img src="images/etudiant-removebg.png">
-        </div>
-        <div class="ecris-card2">
-            <H2>Ma liste D'Etudiants</H2>
+</section>
+
+<!-- couter section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <div class="row">
+
+        <div class="image">
+            <img src="../../public/img/course-5.svg" alt="">
         </div>
 
-        <div class="content-card2">
-            <span>Voici la liste de tout les étudiant que vous avez a votre responsabilitez </span>
+        <div class="content">
+            <h3>Bienvenue Magali</h3>
+            <p>Votre téléphone :</p>
+            <p>Votre mail :</p>
+            <a href="#contact" class="btn">Acceder a mes étudiant</a>
         </div>
 
-        <a class="buttoncard2" style="--clr:#499c54" href="L.html"><span> Cliquez-ici</span></a>
     </div>
 
-    <div class="card3">
-        <div class="imgBX3">
-            <img src="images/services-parametres-et-icone-d-engrenage-vert-removebg-preview.png">
-        </div>
-        <div class="ecris-card3">
-            <H2>Mes Parametres</H2>
-        </div>
+</section>
 
-        <div class="content-card3">
-            <span>Voici la liste de tout les étudiant que vous avez a votre responsabilitez </span>
-        </div>
-        <a class="buttoncard3" style="--clr:#499c54" href="#"><span> Cliquez-ici</span></a>
-    </div>
-</div>
+<!-- about section ends -->
+
+<!-- courses section starts  -->
 
 
-<footer class="Footeritems_2">
-    <img  class="footer-logo_2" src="images/FSI_logo.png">
-    <ul class="footer-menu_2">
-        <li>
-            <a  class="nav-link" href="A.html"><i class="fa-solid fa-house-user"></i>
-                Mention légales
-            </a>
 
-    </ul>
+<footer class="footer">
+
+    <section>
+
+
+        <div class="credit">&copy; copyright @ 2022 by <span>mr. PHPMASTER</span> | all rights reserved!</div>
+
+    </section>
+
 </footer>
 
-</body>
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/main.js"></script>
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
 </body>
 </html>

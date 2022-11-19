@@ -1,245 +1,193 @@
-<?php
-?>
+<?php ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Online Education Website Design</title>
 
-    <!-- Font Awesome -->
+    <!-- swiper css link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet"/>
-    <link href="/public/css/main.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/e3c4ffb28a.js" crossorigin="anonymous"></script>
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../../public/css/style.css">
 
 </head>
 <body>
 
-<nav class="NavbarItems">
-    <img  class="navbar-logo" src="images/FSI_logo.png">
-    <ul class="nav-menu">
-        <li>
-            <a  class="nav-link" href="A.html"><i class="fa-solid fa-house-user"></i>
-                Accueil
-            </a>
-        <li>
-            <a  class="nav-link" href="L.html"><i class="fa-solid fa-list"></i>
-                Liste Etudiant
-            </a>
-        </li>
+<!-- header section starts  -->
 
-        <li>
-            <a class="nav-link" href="/"><i class="fa-solid fa-right-to-bracket"></i>
-                Deconnexion
-            </a>
-        </li>
-    </ul>
-</nav>
+<header class="header">
 
-<div class="container_etudiant">
+    <section class="flex">
 
-    <table class="table align-middle mb-0 bg-white" style="margin-top: 200px;width: 75%; margin-left: 220px">
-        <thead class="bg-light">
-        <tr>
-            <th>Nom</th>
-            <th>Specialiter </th>
-            <th>TEL</th>
-            <th>Sa classe</th>
-            <th>Editer</th>
-            <th>+ infos</th>
-        </tr>
-        </thead>
-        <tbody>
+        <img src="../../public/img/FSI_logo.png" style="width: 60px">
+        <nav class="navbar">
+            <a href="index.html">Accueil</a>
+            <a href="Liste_etudiant.html">Liste Etudiant</a>
+            <a href="Admin.html">Parametre</a>
+            <a href="#teachers">Deconnexion</a>
+        </nav>
 
-        <tr>
+        <div id="menu-btn" class="fas fa-bars"></div>
 
-            <!-- # 1 eleves  -->
-            <td>
-                <div class="d-flex align-items-center">
-                    <img src="images/etudiant-removebg.png" alt="" style="width: 45px; height: 45px" class="rounded-circle"
-                    />
-                    <div class="ms-3">
-                        <p class="fw-bold mb-1">John Doe</p>
-                        <p class="text-muted mb-0">john.doe@gmail.com</p>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <p class="fw-normal mb-1">Cybersecuriter</p>
-            </td>
-            <td>
-                <span class="badge badge-success rounded-pill d-inline">06.09.08.32.22</span>
-            </td>
-            <td>1 er année</td>
+    </section>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+<section class="home" id="home">
+
+    <div class="row">
+
+        <div class="content">
+            <h3>Liste Etudiant <span>FSI</span></h3>
+        </div>
+
+        <div class="image">
+            <img src="../../public/img/homg-img.svg" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- couter section stars  -->
 
 
-            <td>
-                <button type="button" class="btn btn-link btn-sm btn-rounded">
-                    Edit
-                </button>
-            </td>
+<!-- couter section ends -->
 
-            <td>
-                <button type="button" class="btn btn-link btn-sm btn-rounded">
-                    Pour plus d'info
-                </button>
-            </td>
-        </tr>
+<!-- about section starts  -->
+<section class="about" id="about">
 
-        <tr>
+    <div class="row">
+        <div class="content">
+            <table class="content-table">
+                <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prenoms</th>
+                    <th>Mail</th>
+                    <th>Specialiter</th>
+                    <th>TEL</th>
+                    <th>classe</th>
+                    <th>Editer</th>
+                    <th>+ infos</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Albert</td>
+                    <td>Inaya</td>
+                    <td>chirac@yahoo.fr</td>
+                    <td>Cyber</td>
+                    <td>06.09.98.09.33</td>
+                    <td>1 SIO</td>
+                    <td> <a href="" style="color:floralwhite;">
+                            Editer</a></td>
+                    <td> <a href="" style="color:floralwhite;">
+                            + infos</a></td>
+                </tr>
+                <tr class="active-row">
+                    <td>Albert</td>
+                    <td>Inaya</td>
+                    <td>chirac@yahoo.fr</td>
+                    <td>Cyber</td>
+                    <td>06.09.98.09.33</td>
+                    <td>1 SIO</td>
+                    <td> <a href="" style="color:floralwhite;">
+                            Editer</a></td>
+                    <td> <a href="" style="color:floralwhite;">
+                            + infos</a></td>
+                </tr>
+                <tr>
+                    <td>Albert</td>
+                    <td>Inaya</td>
+                    <td>chirac@yahoo.fr</td>
+                    <td>Cyber</td>
+                    <td>06.09.98.09.33</td>
+                    <td>1 SIO</td>
+                    <td> <a href="" style="color:floralwhite;">
+                            Editer</a></td>
+                    <td> <a href="" style="color:floralwhite;">
+                            + infos</a></td>
+                </tr>
+                <tr>
+                    <td>Albert</td>
+                    <td>Inaya</td>
+                    <td>chirac@yahoo.fr</td>
+                    <td>Cyber</td>
+                    <td>06.09.98.09.33</td>
+                    <td>1 SIO</td>
+                    <td> <a href="" style="color:floralwhite;">
+                            Editer</a></td>
+                    <td> <a href="" style="color:floralwhite;">
+                            + infos</a></td>
+                </tr>
+                <tr>
+                    <td>Albert</td>
+                    <td>Inaya</td>
+                    <td>chirac@yahoo.fr</td>
+                    <td>Cyber</td>
+                    <td>06.09.98.09.33</td>
+                    <td>1 SIO</td>
+                    <td> <a href="" style="color:floralwhite;">
+                            Editer</a></td>
+                    <td> <a href="" style="color:floralwhite;">
+                            +infos</a></td>
+                </tr>
 
-            <!-- # 1 eleves  -->
-            <td>
-                <div class="d-flex align-items-center">
-                    <img src="images/etudiant-removebg.png" alt="" style="width: 45px; height: 45px" class="rounded-circle"
-                    />
-                    <div class="ms-3">
-                        <p class="fw-bold mb-1">John Doe</p>
-                        <p class="text-muted mb-0">john.doe@gmail.com</p>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <p class="fw-normal mb-1">Cybersecuriter</p>
-            </td>
-            <td>
-                <span class="badge badge-success rounded-pill d-inline">06.09.08.32.22</span>
-            </td>
-            <td>1 er année</td>
-
-            <td>
-                <button type="button" class="btn btn-link btn-sm btn-rounded">
-                    Edit
-                </button>
-            </td>
-
-            <td>
-                <button type="button" class="btn btn-link btn-sm btn-rounded">
-                    Pour plus d'info
-                </button>
-            </td>
-        </tr>
-
-        <tr>
-
-            <!-- # 1 eleves  -->
-            <td>
-                <div class="d-flex align-items-center">
-                    <img src="images/etudiant-removebg.png" alt="" style="width: 45px; height: 45px" class="rounded-circle"
-                    />
-                    <div class="ms-3">
-                        <p class="fw-bold mb-1">John Doe</p>
-                        <p class="text-muted mb-0">john.doe@gmail.com</p>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <p class="fw-normal mb-1">Cybersecuriter</p>
-            </td>
-            <td>
-                <span class="badge badge-success rounded-pill d-inline">06.09.08.32.22</span>
-            </td>
-            <td>1 er année</td>
-
-            <td>
-                <button type="button" class="btn btn-link btn-sm btn-rounded">
-                    Edit
-                </button>
-            </td>
-
-            <td>
-                <button type="button" class="btn btn-link btn-sm btn-rounded">
-                    Pour plus d'info
-                </button>
-            </td>
-        </tr>
-
-        <!-- # 2 eleves  -->
-        <td>
-            <div class="d-flex align-items-center">
-                <img src="images/etudiant-removebg.png" alt="" style="width: 45px; height: 45px" class="rounded-circle"
-                />
-                <div class="ms-3">
-                    <p class="fw-bold mb-1">John Doe</p>
-                    <p class="text-muted mb-0">john.doe@gmail.com</p>
-                </div>
-            </div>
-        </td>
-        <td>
-            <p class="fw-normal mb-1">Cybersecuriter</p>
-        </td>
-        <td>
-            <span class="badge badge-success rounded-pill d-inline">06.09.08.32.22</span>
-        </td>
-        <td>1 er année</td>
+                </tbody>
+            </table>
 
 
-        <td>
-            <button type="button" class="btn btn-link btn-sm btn-rounded">
-                Edit
-            </button>
-        </td>
+        </div>
 
-        <td>
-            <button type="button" class="btn btn-link btn-sm btn-rounded">
-                Pour plus d'info
-            </button>
-        </td>
-        </tr>
+    </div>
 
-        <!-- # 3 eleves  -->
-        <td>
-            <div class="d-flex align-items-center">
-                <img src="images/etudiant-removebg.png" alt="" style="width: 45px; height: 45px" class="rounded-circle"
-                />
-                <div class="ms-3">
-                    <p class="fw-bold mb-1">John Doe</p>
-                    <p class="text-muted mb-0">john.doe@gmail.com</p>
-                </div>
-            </div>
-        </td>
-        <td>
-            <p class="fw-normal mb-1">Cybersecuriter</p>
-        </td>
-        <td>
-            <span class="badge badge-success rounded-pill d-inline">06.09.08.32.22</span>
-        </td>
-        <td>1 er année</td>
+</section>
+<!-- about section ends -->
+
+<!-- courses section starts  -->
 
 
-        <td>
-            <button type="button" class="btn btn-link btn-sm btn-rounded">
-                Edit
-            </button>
-        </td>
 
-        <td>
-            <button type="button" class="btn btn-link btn-sm btn-rounded">
-                Pour plus d'info
-            </button>
-        </td>
+<footer class="footer">
 
-        </tr>
-
-        </tbody>
-    </table>
-</div>
+    <section>
 
 
-<footer class="Footeritems">
-    <img  class="footer-logo" src="images/FSI_logo.png">
-    <ul class="footer-menu">
-        <li>
-            <a  class="nav-link" href="A.html"><i class="fa-solid fa-house-user"></i>
-                Mention légales
-            </a>
+        <div class="credit">&copy; copyright @ 2022 by <span>mr. PHPMASTER</span> | all rights reserved!</div>
 
-    </ul>
+    </section>
+
 </footer>
 
+<!-- footer section ends -->
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
 
 </body>
 </html>
