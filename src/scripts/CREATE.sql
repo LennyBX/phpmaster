@@ -52,7 +52,7 @@ CREATE TABLE Etudiant(
                          LOG_ETU VARCHAR(50),
                          MDP_ETU VARCHAR(250),
                          CP_ETU INT,
-                         RUE_ETU VARCHAR(50),
+                         RUE_ETU INT,
                          VIL_ETU VARCHAR(50),
                          NUM_RUE_ETU INT,
                          MAI_ETU VARCHAR(50),

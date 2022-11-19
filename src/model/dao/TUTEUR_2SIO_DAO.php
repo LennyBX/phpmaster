@@ -1,8 +1,8 @@
 <?php
 
-namespace models\dao;
+namespace model\dao;
 
-use models\dto\TUTEUR;
+use model\dto\TUTEUR;
 
 class TUTEUR_2SIO_DAO
 {

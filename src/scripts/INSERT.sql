@@ -1,0 +1,1 @@
+INSERT INTO ENTREPRISE VALUES (1, 'Argent', 'TRUMP', 'Donald', 12353, 'New York', 'Rue de la moulla', 143, 0612039182, 'donaldtrump@argent.fr');

@@ -1,8 +1,8 @@
 <?php
 
-namespace models\dao;
+namespace model\dao;
 
-use models\dto\ADMIN;
+use model\dto\ADMIN;
 
 class ADMIN_2SIO_DAO
 {

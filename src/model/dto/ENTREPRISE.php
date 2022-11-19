@@ -1,7 +1,8 @@
 <?php
 
-namespace models\dto;
+namespace model\dto;
 
+use model\dao\ENTREPRISE_2SIO_DAO;
 
 class ENTREPRISE
 {

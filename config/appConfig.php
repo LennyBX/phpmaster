@@ -8,13 +8,13 @@ if (session_status() === PHP_SESSION_NONE) {
 
 define('URL_BASE', "http://localhost/ort/P2023_2SIO_Projet_Tutorat");
 
-use models\dao\ADMIN_2SIO_DAO;
-use models\dao\ENTREPRISE_2SIO_DAO;
-use models\dao\ETUDIANT_2SIO_DAO;
-use models\dao\NOTE_2SIO_DAO;
-use models\dao\TUTEUR_2SIO_DAO;
+use model\dao\ADMIN_2SIO_DAO;
+use model\dao\ENTREPRISE_2SIO_DAO;
+use model\dao\ETUDIANT_2SIO_DAO;
+use model\dao\NOTE_2SIO_DAO;
+use model\dao\TUTEUR_2SIO_DAO;
 
-$bdd = new \models\dto\DB("localhost", "P2023_2SIO_Projet_Tutorat", "root", "");
+$bdd = new \model\dto\DB("localhost", "P2023_2SIO_Projet_Tutorat", "root", "");
 $bdd = $bdd->getPDO();
 
 $repositoryAdmin = new ADMIN_2SIO_DAO($bdd);

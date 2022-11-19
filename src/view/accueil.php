@@ -1,5 +1,5 @@
-<?php ?>
-
+<?php
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -118,7 +118,7 @@
         </div>
 
         <div class="content">
-            <h3>Bienvenue Magali</h3>
+            <h3>Bienvenue Magalie</h3>
             <p>Votre téléphone :</p>
             <p>Votre mail :</p>
             <a href="#contact" class="btn">Acceder a mes étudiant</a>
