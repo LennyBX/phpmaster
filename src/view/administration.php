@@ -16,6 +16,7 @@ $id_supprimer = 1;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
 
+
     <!-- swiper css link  -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
