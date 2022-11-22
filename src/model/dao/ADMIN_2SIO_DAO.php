@@ -20,7 +20,7 @@ class ADMIN_2SIO_DAO
         if ($req) {
             $req->setFetchMode(\PDO::FETCH_ASSOC);
             foreach ($req as $row) {
-                $resultSet[] = new ADMIN_2SIO_DAO($row);
+                $resultSet[] = new ADMIN($row);
 
             }
         }

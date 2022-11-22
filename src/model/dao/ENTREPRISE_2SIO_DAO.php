@@ -20,7 +20,7 @@ class ENTREPRISE_2SIO_DAO
         if ($req) {
             $req->setFetchMode(\PDO::FETCH_ASSOC);
             foreach ($req as $row) {
-                $resultSet[] = new ENTREPRISE_2SIO_DAO($row);
+                $resultSet[] = new ENTREPRISE($row);
 
             }
         }
