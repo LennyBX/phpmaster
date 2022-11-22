@@ -20,7 +20,7 @@ class NOTE_2SIO_DAO
         if ($req) {
             $req->setFetchMode(\PDO::FETCH_ASSOC);
             foreach ($req as $row) {
-                $resultSet[] = new NOTE_2SIO_DAO($row);
+                $resultSet[] = new NOTE($row);
 
             }
         }
