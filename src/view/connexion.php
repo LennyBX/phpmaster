@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../public/css/connexion.css">
     <title>Connexion FSI</title>
+    <link rel="icon" type="image/pngn" href="../../public/img/FSI_logo.png">
 </head>
 <body>
 

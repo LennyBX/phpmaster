@@ -14,7 +14,8 @@ $id_supprimer = 1;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Admin FSI</title>
+    <link rel="icon" type="image/pngn" href="../../public/img/FSI_logo.png">
 
 
     <!-- swiper css link  -->
@@ -116,7 +117,8 @@ $id_supprimer = 1;
                                 editer</a></td>
                         <td > <a class="supprimer" href="#" style="color:floralwhite;">
                                 &cross;</a></td>
-                        <td> </td>
+                        <td> <a c href="Affectation_Etudiant.php" style="color:floralwhite;">
+                                &plus;</a></td>
                     </tr>
                 <?php } ?>
                 </tbody>
