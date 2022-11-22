@@ -81,29 +81,30 @@ $mesEtudiants = $repositoryEtudiant->getAll();
 
             <form class="container">
                 <div class="title">
-                    <h1 class= " affection_etud">Affectation Etudiant </h1>
+                    <h1 class="affec">Affectation Etudiant </h1>
                 </div>
 
-                    <SELECT name="liste_etudiant"  class="select1" size="1">
+                    <SELECT name="liste_etudiant" size="1" class="select1">
                         <OPTION selected disabled>Choisir un Etudiant en 3OLEN</OPTION>
                         <?php foreach ($mesEtudiants as $etudiant) { ?>
                         <OPTION><?php echo $etudiant->getPREETU() . ' ' . $etudiant->getNOMETU() ?>
                             <?php } ?>
                     </SELECT>
 
-                    <SELECT name="liste_etudiant2" class="select2" size="1">
-                        <OPTION selected disabled>Choisir un Etudiant en 4OLEN</OPTION>
-                        <?php foreach ($mesEtudiants as $etudiant) { ?>
-                        <OPTION><?php echo $etudiant->getPREETU() . ' ' . $etudiant->getNOMETU() ?>
-                            <?php } ?>
-                    </SELECT>
+                <SELECT name="liste_etudiant" size="1" class="select2">
+                    <OPTION selected disabled>Choisir un Etudiant en 4OLEN</OPTION>
+                    <?php foreach ($mesEtudiants as $etudiant) { ?>
+                    <OPTION><?php echo $etudiant->getPREETU() . ' ' . $etudiant->getNOMETU() ?>
+                        <?php } ?>
+                </SELECT>
 
-                    <SELECT name="liste_etudiant3" class="select3" size="1">
-                        <OPTION selected disabled>Choisir un Etudiant en 5OLEN</OPTION>
-                        <?php foreach ($mesEtudiants as $etudiant) { ?>
-                        <OPTION><?php echo $etudiant->getPREETU() . ' ' . $etudiant->getNOMETU() ?>
-                            <?php } ?>
-                    </SELECT>
+                <SELECT name="liste_etudiant" size="1" class="select3">
+                    <OPTION selected disabled>Choisir un Etudiant en 5OLEN</OPTION>
+                    <?php foreach ($mesEtudiants as $etudiant) { ?>
+                    <OPTION><?php echo $etudiant->getPREETU() . ' ' . $etudiant->getNOMETU() ?>
+                        <?php } ?>
+                </SELECT>
+
 
 
                 <div class="input_button2">
@@ -124,7 +125,7 @@ $mesEtudiants = $repositoryEtudiant->getAll();
     <section>
 
 
-        <div class="credit">&copy; copyright @ 2022 by <span>PHPMASTER Group</span> | all rights reserved!</div>
+        <div class="credit">&copy; copyright @ 2022 by <span>mr. PHPMASTER</span> | all rights reserved!</div>
 
     </section>
 
