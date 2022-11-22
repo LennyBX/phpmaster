@@ -1,5 +1,6 @@
 <?php
 require_once '../../config/appConfig.php';
+$_SESSION['user'] = $repositoryTuteur->getById(1);
 if(!(isset($_SESSION['user']))) {
     header("location: ../controller/connexion_control.php");
 }
