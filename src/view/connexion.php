@@ -36,7 +36,7 @@ require_once '../../config/appConfig.php';
                             <h3>Connectez-Vous à <strong>  <img src="../../public/img/FSI_logo.png" style="width: 66px"></strong></h3>
                         </div>
 
-                        <form action="../controller/connexion_control.php" method="post">
+                        <form action="../controller/connexion_trait_control.php" method="post">
                             <div class="form-group first">
                                 <label for="username">Identifiant</label>
                                 <input type="text" class="form-control" id="username">
