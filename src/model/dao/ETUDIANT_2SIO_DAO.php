@@ -42,4 +42,18 @@ class ETUDIANT_2SIO_DAO
 
     }
 
+    public function getByLogin(string $login): ?ETUDIANT {
+        $resultSet = NULL;
+        $req = $this->bdd->prepare('SELECT * FROM etudiant WHERE LOG_ETU = :log_etu;');
+        $res = $req->execute([':log_etu' => $login]);
+
+        if ($res !== FALSE) {
+            $tab = ($tmp = $req->fetch(\PDO::FETCH_ASSOC)) ? $tmp : null;
+            if(!is_null($tab)) {
+                $resultSet = new ETUDIANT($tab);
+            }
+        }
+        return $resultSet;
+    }
+
 }

@@ -1,4 +1,10 @@
 <?php
+require_once '../../config/appConfig.php';
+
+/*if(!(isset($_SESSION['user']))) {
+    header("location: ../controller/connexion_control.php");
+}*/
+
 ?>
 <!doctype html>
 <html lang="fr">
@@ -30,7 +36,7 @@
                             <h3>Connectez-Vous à <strong>  <img src="../../public/img/FSI_logo.png" style="width: 66px"></strong></h3>
                         </div>
 
-                        <form action="#" method="post">
+                        <form action="../controller/connexion_control.php" method="post">
                             <div class="form-group first">
                                 <label for="username">Identifiant</label>
                                 <input type="text" class="form-control" id="username">
@@ -42,7 +48,7 @@
                             </div>
 
                             <div class="form-group last mb-4">
-                                <label for="password">Confirmer Mot de passe</label>
+                                <label for="passwordComf">Confirmer Mot de passe</label>
                                 <input type="password" class="form-control" id="confirm-password">
                             </div>
                             <div class="d-flex mb-5 align-items-center">

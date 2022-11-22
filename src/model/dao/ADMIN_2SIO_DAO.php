@@ -39,7 +39,21 @@ class ADMIN_2SIO_DAO
             }
         }
         return $resultSet;
-
     }
+
+    public function getByLogin(string $login): ?ADMIN {
+        $resultSet = NULL;
+        $req = $this->bdd->prepare('SELECT * FROM admin WHERE LOG_ADM = :log_adm;');
+        $res = $req->execute([':log_adm' => $login]);
+
+        if ($res !== FALSE) {
+            $tab = ($tmp = $req->fetch(\PDO::FETCH_ASSOC)) ? $tmp : null;
+            if(!is_null($tab)) {
+                $resultSet = new ADMIN($tab);
+            }
+        }
+        return $resultSet;
+    }
+
 
 }
