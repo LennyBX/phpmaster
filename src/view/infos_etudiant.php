@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Etudiant</title>
+    <title>Detail Etudiant FSI</title>
+    <link rel="icon" type="image/pngn" href="../../public/img/FSI_logo.png">
 
     <!-- swiper css link  -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
@@ -50,9 +51,7 @@
 
 </header>
 
-<!-- header section ends -->
 
-<!-- home section starts  -->
 <section class="home" id="home">
 
     <div class="row">
@@ -69,14 +68,7 @@
 
 </section>
 
-<!-- home section ends -->
 
-<!-- couter section stars  -->
-
-
-<!-- couter section ends -->
-
-<!-- about section starts  -->
 <section class="about" id="about">
 
     <div class="row">
@@ -177,9 +169,7 @@
     </div>
 
 </section>
-<!-- about section ends -->
 
-<!-- courses section starts  -->
 
 
 

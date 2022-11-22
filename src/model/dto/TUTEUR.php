@@ -26,13 +26,13 @@ class TUTEUR
      */
     public function __construct($tab)
     {
-        $this->ID_TUT = $tab['$ID_TUT'];
-        $this->NOM_TUT = $tab['$NOM_TUT'];
-        $this->PRE_TUT = $tab['$PRE_TUT'];
-        $this->TEL_TUT = $tab['$TEL_TUT'];
-        $this->LOG_TUT = $tab['$LOG_TUT'];
-        $this->MDP_TUT = $tab['$MDP_TUT'];
-        $this->ID_NOT_TUT = $tab['$ID_NOT_TUT'];
+        $this->ID_TUT = $tab['ID_TUT'];
+        $this->NOM_TUT = $tab['NOM_TUT'];
+        $this->PRE_TUT = $tab['PRE_TUT'];
+        $this->TEL_TUT = $tab['TEL_TUT'];
+        $this->LOG_TUT = $tab['LOG_TUT'];
+        $this->MDP_TUT = $tab['MDP_TUT'];
+        $this->ID_NOT_TUT = $tab['ID_NOT_TUT'];
     }
 
     /**

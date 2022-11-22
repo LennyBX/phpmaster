@@ -30,7 +30,6 @@
 </head>
 <body>
 
-<!-- header section starts  -->
 
 <header class="header">
 
@@ -50,9 +49,6 @@
 
 </header>
 
-<!-- header section ends -->
-
-<!-- home section starts  -->
 <section class="home" id="home">
 
     <div class="row">
@@ -69,14 +65,8 @@
 
 </section>
 
-<!-- home section ends -->
-
-<!-- couter section stars  -->
 
 
-<!-- couter section ends -->
-
-<!-- about section starts  -->
 <section class="about" id="about">
 
     <div class="row">
@@ -140,9 +130,6 @@
     </div>
 
 </section>
-<!-- about section ends -->
-
-<!-- courses section starts  -->
 
 
 
@@ -157,11 +144,8 @@
 
 </footer>
 
-<!-- footer section ends -->
-<!-- swiper js link  -->
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
-<!-- custom js file link  -->
 <script src="js/script.js"></script>
 
 </body>

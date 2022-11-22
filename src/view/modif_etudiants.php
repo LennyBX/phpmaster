@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modification Etudiant</title>
+    <link rel="icon" type="image/pngn" href="../../public/img/FSI_logo.png">
 
     <!-- swiper css link  -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
@@ -30,7 +31,6 @@
 </head>
 <body>
 
-<!-- header section starts  -->
 
 <header class="header">
 
@@ -50,9 +50,6 @@
 
 </header>
 
-<!-- header section ends -->
-
-<!-- home section starts  -->
 <section class="home" id="home">
 
     <div class="row">
@@ -69,14 +66,10 @@
 
 </section>
 
-<!-- home section ends -->
-
-<!-- couter section stars  -->
 
 
-<!-- couter section ends -->
 
-<!-- about section starts  -->
+
 <section class="about" id="about">
 
     <div class="row">
@@ -123,10 +116,6 @@
     </div>
 
 </section>
-<!-- about section ends -->
-
-<!-- courses section starts  -->
-
 
 
 <footer class="footer">
@@ -140,11 +129,8 @@
 
 </footer>
 
-<!-- footer section ends -->
-<!-- swiper js link  -->
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
-<!-- custom js file link  -->
 <script src="js/script.js"></script>
 
 </body>
