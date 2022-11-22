@@ -47,7 +47,7 @@ if(!(isset($_SESSION['user']))) {
             <a href="../controller/accueil_control.php">Accueil</a>
             <a href="../controller/liste_etudiants_control.php">Liste étudiants</a>
             <a href="../controller/administration_control.php">Paramètres</a>
-            <a href="../controller/connexion_control.php">Déconnexion</a>
+            <a href="../controller/deconnexion_control.php">Déconnexion</a>
         </nav>
 
         <div id="menu-btn" class="fas fa-bars"></div>
