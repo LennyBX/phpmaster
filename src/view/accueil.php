@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Responsive Online Education Website Design</title>
+    <title>Accueil</title>
 
     <!-- swiper css link  -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
@@ -118,7 +118,7 @@
         </div>
 
         <div class="content">
-            <h3>Bienvenue Magalie</h3>
+            <h3>Bienvenue Magali</h3>
             <p>Votre téléphone :</p>
             <p>Votre mail :</p>
             <a href="#contact" class="btn">Acceder a mes étudiant</a>

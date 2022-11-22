@@ -178,10 +178,10 @@
         </div>
 
         <div class="content">
-            <h3>Pour ajouter un Tuteur</h3>
+            <h3>Pour ajouter un Etudiant</h3>
             <p>Ceci est trés simple il suffit simplement de cliquer sur le bouton est de remplir les élements nécessaire
                 a l'inscription de ce denier !</p>
-            <a href="#contact" class="btn">Ajouter un Tuteur</a>
+            <a href="#contact" class="btn">Ajouter un Etudiant</a>
         </div>
 
     </div>

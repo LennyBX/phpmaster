@@ -358,3 +358,104 @@ section{
     font-weight: bold;
     color: white;
 }
+
+
+.content-table2 {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 19px;
+    width: 96%;
+    border-radius: 10px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table2 thead tr {
+    background-color: #00E77F;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.content-table2 th,
+.content-table2 td {
+    padding: 13px 27px;
+    color: white;
+}
+
+.content-table2 tbody tr {
+    border-bottom: 1px solid white;
+}
+
+.content-table2 tbody tr:nth-of-type(even) {
+    background-color: gray;
+}
+
+.content-table2 tbody tr:last-of-type {
+    border-bottom: 2px solid #00E77F;
+}
+
+.content-table2 tbody tr.active-row {
+    font-weight: bold;
+    color: white;
+}
+
+.container{
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    background: #3d3d3d;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px  #00E77F;
+    margin-bottom: 20px;
+}
+
+.container .form {
+    padding: 30px;
+}
+.title{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    font-size: 67px;
+    color: white;
+    font-weight: bold;
+}
+
+.title::before{
+    content: '';
+    position: absolute;
+    left: 310px;
+    top: 55px;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    width: 70px;
+    background-color: #00E77F;
+    border-radius: 30px;
+}
+ .input_field{
+     background-color: #4b4b4b;
+     color: white;
+     padding: 15px;
+     border-bottom: 2px solid white;
+
+}
+
+.input_field input{
+    background-color: #4b4b4b;
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+
+.input_button{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
