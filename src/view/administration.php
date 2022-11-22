@@ -118,7 +118,7 @@ $id_supprimer = 1;
                                 editer</a></td>
                         <td > <a class="supprimer" href="#" style="color:floralwhite;">
                                 &cross;</a></td>
-                        <td> <a c href="Affectation_Etudiant.php" style="color:floralwhite;">
+                        <td> <a c href="affectation_etudiants.php" style="color:floralwhite;">
                                 &plus;</a></td>
                     </tr>
                 <?php } ?>
@@ -143,10 +143,10 @@ $id_supprimer = 1;
         </div>
 
         <div class="content">
-            <h3>Pour ajouter un Etudiant</h3>
-            <p>Ceci est trés simple il suffit simplement de cliquer sur le bouton est de remplir les élements nécessaire
-                a l'inscription de ce denier !</p>
-            <a href="#contact" class="btn">Ajouter un Etudiant</a>
+            <h3>Pour ajouter un étudiant</h3>
+            <p>Ceci est très simple, il suffit simplement de cliquer sur le bouton est de remplir les éléments nécessaires
+                à l'inscription de ce denier !</p>
+            <a href="../controller/ajout_etudiant_control.php" class="btn">Ajouter un étudiant</a>
         </div>
 
     </div>
@@ -162,7 +162,7 @@ $id_supprimer = 1;
         <div class="content">
             <h3>Pour Gerer les etudiants !</h3>
             <p>Cliquez ici et vous pourrez gere tout les étudiants !</p>
-            <a href="#contact" class="btn">Gerer les Etudiant</a>
+            <a href="../controller/gestion_etudiant_control.php" class="btn">Gérer les étudiants</a>
         </div>
 
         <div class="image">

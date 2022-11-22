@@ -111,7 +111,7 @@ $mesEtudiants = $repositoryEtudiant->getAll();
     <section>
 
 
-        <div class="credit">&copy; copyright @ 2022 by <span>mr. PHPMASTER</span> | all rights reserved!</div>
+        <div class="credit">&copy; copyright @ 2022 by <span>PHPMASTER Group</span> | all rights reserved!</div>
 
     </section>
 
