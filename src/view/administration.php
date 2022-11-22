@@ -1,4 +1,13 @@
 <?php
+require_once '../../config/appConfig.php';
+
+/*if(!(isset($_SESSION['user']))) {
+    header("location: ../controller/connexion_control.php");
+}*/
+
+$mesTuteurs = $repositoryTuteur->getAll();
+$id_supprimer = 1;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +15,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Admin FSI</title>
+    <link rel="icon" type="image/pngn" href="../../public/img/FSI_logo.png">
+
 
     <!-- swiper css link  -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
@@ -39,10 +50,10 @@
 
         <img src="../../public/img/FSI_logo.png" style="width: 60px">
         <nav class="navbar">
-            <a href="index.html">Accueil</a>
-            <a href="Liste_etudiant.html">Liste Etudiant</a>
-            <a href="Admin.html">Parametre</a>
-            <a href="#teachers">Deconnexion</a>
+            <a href="../controller/accueil_control.php">Accueil</a>
+            <a href="../controller/liste_etudiants_control.php">Liste étudiants</a>
+            <a href="../controller/administration_control.php">Paramètres</a>
+            <a href="../controller/connexion_control.php">Déconnexion</a>
         </nav>
 
         <div id="menu-btn" class="fas fa-bars"></div>
@@ -87,76 +98,30 @@
                 <tr>
                     <th>Nom</th>
                     <th>Prenoms</th>
-                    <th>Mail</th>
-                    <th>Specialiter</th>
                     <th>TEL</th>
-                    <th>classe</th>
+                    <th>Mot de passe</th>
+                    <th>Login</th>
                     <th>Editer</th>
-                    <th>+ infos</th>
+                    <th>Supprimer</th>
+                    <th>Affecter</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>Albert</td>
-                    <td>Inaya</td>
-                    <td>chirac@yahoo.fr</td>
-                    <td>Cyber</td>
-                    <td>06.09.98.09.33</td>
-                    <td>1 SIO</td>
-                    <td> <a href="" style="color:floralwhite;">
-                            Editer</a></td>
-                    <td> <a href="" style="color:floralwhite;">
-                            + infos</a></td>
-                </tr>
-                <tr class="active-row">
-                    <td>Albert</td>
-                    <td>Inaya</td>
-                    <td>chirac@yahoo.fr</td>
-                    <td>Cyber</td>
-                    <td>06.09.98.09.33</td>
-                    <td>1 SIO</td>
-                    <td> <a href="" style="color:floralwhite;">
-                            Editer</a></td>
-                    <td> <a href="" style="color:floralwhite;">
-                            + infos</a></td>
-                </tr>
-                <tr>
-                    <td>Albert</td>
-                    <td>Inaya</td>
-                    <td>chirac@yahoo.fr</td>
-                    <td>Cyber</td>
-                    <td>06.09.98.09.33</td>
-                    <td>1 SIO</td>
-                    <td> <a href="" style="color:floralwhite;">
-                            Editer</a></td>
-                    <td> <a href="" style="color:floralwhite;">
-                            + infos</a></td>
-                </tr>
-                <tr>
-                    <td>Albert</td>
-                    <td>Inaya</td>
-                    <td>chirac@yahoo.fr</td>
-                    <td>Cyber</td>
-                    <td>06.09.98.09.33</td>
-                    <td>1 SIO</td>
-                    <td> <a href="" style="color:floralwhite;">
-                            Editer</a></td>
-                    <td> <a href="" style="color:floralwhite;">
-                            + infos</a></td>
-                </tr>
-                <tr>
-                    <td>Albert</td>
-                    <td>Inaya</td>
-                    <td>chirac@yahoo.fr</td>
-                    <td>Cyber</td>
-                    <td>06.09.98.09.33</td>
-                    <td>1 SIO</td>
-                    <td> <a href="" style="color:floralwhite;">
-                            Editer</a></td>
-                    <td> <a href="" style="color:floralwhite;">
-                            +infos</a></td>
-                </tr>
-
+                <?php foreach ($mesTuteurs as $tuteur) { ?>
+                    <tr>
+                        <td><?php echo $tuteur->getNOMTUT() ?></td>
+                        <td><?php echo $tuteur->getPRETUT() ?></td>
+                        <td><?php echo $tuteur->getTELTUT() ?></td>
+                        <td><?php echo $tuteur->getMDPTUT() ?></td>
+                        <td><?php echo $tuteur->getLOGTUT() ?></td>
+                        <td> <a href="#" style="color:floralwhite;">
+                                editer</a></td>
+                        <td > <a class="supprimer" href="#" style="color:floralwhite;">
+                                &cross;</a></td>
+                        <td> <a c href="Affectation_Etudiant.php" style="color:floralwhite;">
+                                &plus;</a></td>
+                    </tr>
+                <?php } ?>
                 </tbody>
             </table>
 
@@ -190,6 +155,25 @@
 <!-- courses section starts  -->
 
 
+<section class="about" id="about">
+
+    <div class="row">
+
+        <div class="content">
+            <h3>Pour Gerer les etudiants !</h3>
+            <p>Cliquez ici et vous pourrez gere tout les étudiants !</p>
+            <a href="#contact" class="btn">Gerer les Etudiant</a>
+        </div>
+
+        <div class="image">
+            <img src="../../public/img/course-5.svg" alt="">
+        </div>
+
+
+    </div>
+
+</section>
+
 
 <footer class="footer">
 
@@ -207,7 +191,7 @@
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
 <!-- custom js file link  -->
-<script src="js/script.js"></script>
+<script src="../../public/script/script.js"></script>
 
 </body>
 </html>

@@ -2,9 +2,9 @@
 
 namespace model\dao;
 
-use model\dto\ENTREPRISE;
+use model\dto\NOTE_2;
 
-class ENTREPRISE_2SIO_DAO
+class NOTE_2_2SIO_DAO
 {
     protected $bdd;
     public function __construct(\PDO $bdd){
@@ -15,27 +15,27 @@ class ENTREPRISE_2SIO_DAO
     public function getAll() : ?array
     {
         $resultSet = NULL;
-        $req = $this->bdd->query('SELECT * FROM entreprise');
+        $req = $this->bdd->query('SELECT * FROM note_2');
 
         if ($req) {
             $req->setFetchMode(\PDO::FETCH_ASSOC);
             foreach ($req as $row) {
-                $resultSet[] = new ENTREPRISE($row);
+                $resultSet[] = new NOTE_2($row);
 
             }
         }
         return $resultSet;
     }
 
-    public function getById(int $id_ent): ?ENTREPRISE {
+    public function getById(int $id_note): ?NOTE_2 {
         $resultSet = NULL;
-        $req = $this->bdd->prepare('SELECT * FROM entreprise WHERE id_ent = :id_ent;');
-        $res = $req->execute([':id_ent' => $id_ent]);
+        $req = $this->bdd->prepare('SELECT * FROM note_2 WHERE id_not = :id_note;');
+        $res = $req->execute([':id_note' => $id_note]);
 
         if ($res !== FALSE) {
             $tab = ($tmp = $req->fetch(\PDO::FETCH_ASSOC)) ? $tmp : null;
             if(!is_null($tab)) {
-                $resultSet = new ENTREPRISE($tab);
+                $resultSet = new NOTE_2($tab);
             }
         }
         return $resultSet;

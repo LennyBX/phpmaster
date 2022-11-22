@@ -15,7 +15,7 @@ class ADMIN_2SIO_DAO
     public function getAll() : ?array
     {
         $resultSet = NULL;
-        $req = $this->bdd->query('SELECT * FROM administrateur');
+        $req = $this->bdd->query('SELECT * FROM admin');
 
         if ($req) {
             $req->setFetchMode(\PDO::FETCH_ASSOC);
@@ -27,15 +27,15 @@ class ADMIN_2SIO_DAO
         return $resultSet;
     }
 
-    public function getById(int $id_adm): ?ADMIN_2SIO_DAO {
+    public function getById(int $id_adm): ?ADMIN {
         $resultSet = NULL;
-        $req = $this->bdd->prepare('SELECT * FROM administrateur WHERE id_admin = :id_adm;');
+        $req = $this->bdd->prepare('SELECT * FROM admin WHERE id_adm = :id_adm;');
         $res = $req->execute([':id_adm' => $id_adm]);
 
         if ($res !== FALSE) {
             $tab = ($tmp = $req->fetch(\PDO::FETCH_ASSOC)) ? $tmp : null;
             if(!is_null($tab)) {
-                $resultSet = new ADMIN_2SIO_DAO($tab);
+                $resultSet = new ADMIN($tab);
             }
         }
         return $resultSet;

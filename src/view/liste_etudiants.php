@@ -1,19 +1,28 @@
 <?php
 require_once '../../config/appConfig.php';
+
 if(!(isset($_SESSION['user']))) {
     header("location: ../controller/connexion_control.php");
+} else {
+    $tuteurId = $_SESSION['user']->getIDTUT();
+    $etudiants = $repositoryEtudiant->getAllByTuteur($tuteurId);
 }
-
 ?>
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FSI - Accueil</title>
+    <title>FSI - Liste des étudiants</title>
 
     <!-- swiper css link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
     <!-- font awesome cdn link  -->
@@ -24,10 +33,6 @@ if(!(isset($_SESSION['user']))) {
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet"/>
-
-    <link href="css/main.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/e3c4ffb28a.js" crossorigin="anonymous"></script>
-
     <!-- custom css file link  -->
     <link rel="stylesheet" href="../../public/css/style.css">
     <link rel="icon" type="image/x-icon" href="../../public/img/FSI_logo.png">
@@ -58,13 +63,12 @@ if(!(isset($_SESSION['user']))) {
 <!-- header section ends -->
 
 <!-- home section starts  -->
-
 <section class="home" id="home">
 
     <div class="row">
 
         <div class="content">
-            <h3>FSI <span>Tutorat</span></h3>
+            <h3>Liste étudiants <span>FSI</span></h3>
         </div>
 
         <div class="image">
@@ -79,60 +83,64 @@ if(!(isset($_SESSION['user']))) {
 
 <!-- couter section stars  -->
 
-<section class="count">
-
-    <div class="box-container">
-
-        <div class="box">
-            <i class="fas fa-user-graduate"></i>
-            <div class="content">
-                <h3><?= count($repositoryEtudiant->getAll()) ?></h3>
-                <p>Eleves</p>
-            </div>
-        </div>
-
-        <div class="box">
-            <i class="fas fa-chalkboard-user"></i>
-            <div class="content">
-                <h3><?= count($repositoryTuteur->getAll()) ?></h3>
-                <p>Tuteurs</p>
-            </div>
-        </div>
-
-        <div class="box">
-            <i class="fas fa-face-smile"></i>
-            <div class="content">
-                <h3><?= count($repositoryEtudiant->getAll()) ?></h3>
-                <p>Administrateurs</p>
-            </div>
-        </div>
-
-    </div>
-
-</section>
 
 <!-- couter section ends -->
 
 <!-- about section starts  -->
-
 <section class="about" id="about">
-
+    <?php if (!is_null($etudiants)): ?>
     <div class="row">
-
-        <div class="image">
-            <img src="../../public/img/course-5.svg" alt="">
-        </div>
-
         <div class="content">
-            <h3>Bienvenue <?= $_SESSION['user']->getNOMTUT(); ?> <?= $_SESSION['user']->getPRETUT(); ?></h3>
-            <p>Votre téléphone : <?= $_SESSION['user']->getTELTUT(); ?></p>
-            <a href="../controller/liste_etudiants_control.php" class="btn">Acceder à mes étudiant</a>
+            <table class="content-table">
+                <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Mail</th>
+                    <th>Spécialité</th>
+                    <th>Téléphone</th>
+                    <th>Classe</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <?php
+                foreach ($etudiants as $value):
+                    ?>
+                <tr>
+                    <td><?= $value->getNOMETU(); ?></td>
+                    <td><?= $value->getPREETU(); ?></td>
+                    <td><?= $value->getMAIETU(); ?></td>
+                    <td><?= $value->getSPEETU(); ?></td>
+                    <td><?= $value->getTELETU(); ?></td>
+                    <td><?= $value->getCLAETU(); ?></td>
+                    <td> <a href="../controller/infos_etudiant_control.php?idEtudiant=<?= $value->getIDETU(); ?>" style="color:floralwhite;"><img src="../../public/img/189689.png" alt="" style="width:40px"/> </a></td>
+                    <td> <a href="../controller/modif_etudiant_control.php?idEtudiant=<?= $value->getIDETU(); ?>" style="color:floralwhite;"><img src="../../public/img/1160515.png" alt="" style="width:40px"/> </a></td>
+                </tr>
+                <?php endforeach; ?>
+
+                </tbody>
+
+
+            </table>
+
+
         </div>
 
     </div>
+    <?php else:?>
+    <section class="about" id="about">
 
+        <div class="row">
+            <div class="content">
+                <h2 style="color: white;">Vous ne possédez aucun étudiants pour le moment...</h2>
+            </div>
+        </div>
+    </section>
+    <?php endif; ?>
 </section>
-
 <!-- about section ends -->
 
 <!-- courses section starts  -->
@@ -151,21 +159,6 @@ if(!(isset($_SESSION['user']))) {
 </footer>
 
 <!-- footer section ends -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- swiper js link  -->
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 

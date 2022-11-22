@@ -27,19 +27,17 @@ class TUTEUR_2SIO_DAO
         return $resultSet;
     }
 
-    public function getById(int $id_ent): ?TUTEUR_2SIO_DAO {
+    public function getById(int $id): ?TUTEUR {
         $resultSet = NULL;
-        $req = $this->bdd->prepare('SELECT * FROM tuteur WHERE id_tuteur = :id_tuteur;');
-        $res = $req->execute([':id_ent' => $id_ent]);
-
+        $req = $this->bdd->prepare('SELECT * FROM tuteur WHERE id_tut = :id_tuteur;');
+        $res = $req->execute([':id_tuteur' => $id]);
         if ($res !== FALSE) {
             $tab = ($tmp = $req->fetch(\PDO::FETCH_ASSOC)) ? $tmp : null;
             if(!is_null($tab)) {
-                $resultSet = new TUTEUR_2SIO_DAO($tab);
+                $resultSet = new TUTEUR($tab);
             }
         }
         return $resultSet;
-
     }
 
 }

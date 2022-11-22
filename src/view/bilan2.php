@@ -1,11 +1,16 @@
-<?php ?>
+<?php
+require_once '../../config/appConfig.php';
+if(!(isset($_SESSION['user']))) {
+    header("location: ../controller/connexion_control.php");
+}
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bilan 2 Etudiant</title>
+    <title>FSI - Bilan 2</title>
 
     <!-- swiper css link  -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
@@ -26,6 +31,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet"/>
     <!-- custom css file link  -->
     <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="icon" type="image/x-icon" href="../../public/img/FSI_logo.png">
 
 </head>
 <body>
@@ -38,10 +44,10 @@
 
         <img src="../../public/img/FSI_logo.png" style="width: 60px">
         <nav class="navbar">
-            <a href="index.html">Accueil</a>
-            <a href="Liste_etudiant.html">Liste Etudiant</a>
-            <a href="Admin.html">Parametre</a>
-            <a href="#teachers">Deconnexion</a>
+            <a href="../controller/accueil_control.php">Accueil</a>
+            <a href="../controller/liste_etudiants_control.php">Liste étudiants</a>
+            <a href="../controller/administration_control.php">Paramètres</a>
+            <a href="../controller/connexion_control.php">Déconnexion</a>
         </nav>
 
         <div id="menu-btn" class="fas fa-bars"></div>
@@ -146,7 +152,7 @@
     <section>
 
 
-        <div class="credit">&copy; copyright @ 2022 by <span>mr. PHPMASTER</span> | all rights reserved!</div>
+        <div class="credit">&copy; copyright @ 2022 by <span>PHPMASTER Group</span> | all rights reserved!</div>
 
     </section>
 
