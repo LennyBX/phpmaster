@@ -42,10 +42,10 @@ $mesEtudiants = $repositoryEtudiant->getAll();
 
         <img src="../../public/img/FSI_logo.png" style="width: 60px">
         <nav class="navbar">
-            <a href="index.html">Accueil</a>
-            <a href="Liste_etudiant.html">Liste Etudiant</a>
-            <a href="Admin.html">Parametre</a>
-            <a href="#teachers">Deconnexion</a>
+            <a href="../controller/accueil_control.php">Accueil</a>
+            <a href="../controller/liste_etudiants_control.php">Liste étudiants</a>
+            <a href="../controller/administration_control.php">Paramètres</a>
+            <a href="../controller/connexion_control.php">Déconnexion</a>
         </nav>
 
         <div id="menu-btn" class="fas fa-bars"></div>
@@ -111,7 +111,7 @@ $mesEtudiants = $repositoryEtudiant->getAll();
     <section>
 
 
-        <div class="credit">&copy; copyright @ 2022 by <span>mr. PHPMASTER</span> | all rights reserved!</div>
+        <div class="credit">&copy; copyright @ 2022 by <span>PHPMASTER Group</span> | all rights reserved!</div>
 
     </section>
 
