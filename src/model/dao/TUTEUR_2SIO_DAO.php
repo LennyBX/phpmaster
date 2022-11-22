@@ -40,4 +40,18 @@ class TUTEUR_2SIO_DAO
         return $resultSet;
     }
 
+    public function getByLogin(string $login): ?TUTEUR {
+        $resultSet = NULL;
+        $req = $this->bdd->prepare('SELECT * FROM tuteur WHERE LOG_TUT = :log_tut;');
+        $res = $req->execute([':log_tut' => $login]);
+
+        if ($res !== FALSE) {
+            $tab = ($tmp = $req->fetch(\PDO::FETCH_ASSOC)) ? $tmp : null;
+            if(!is_null($tab)) {
+                $resultSet = new TUTEUR($tab);
+            }
+        }
+        return $resultSet;
+    }
+
 }

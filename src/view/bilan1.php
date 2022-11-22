@@ -36,7 +36,6 @@ if(!(isset($_SESSION['user']))) {
 </head>
 <body>
 
-<!-- header section starts  -->
 
 <header class="header">
 
@@ -56,9 +55,6 @@ if(!(isset($_SESSION['user']))) {
 
 </header>
 
-<!-- header section ends -->
-
-<!-- home section starts  -->
 <section class="home" id="home">
 
     <div class="row">
@@ -75,14 +71,8 @@ if(!(isset($_SESSION['user']))) {
 
 </section>
 
-<!-- home section ends -->
-
-<!-- couter section stars  -->
 
 
-<!-- couter section ends -->
-
-<!-- about section starts  -->
 <section class="about" id="about">
 
     <div class="row">
@@ -146,9 +136,6 @@ if(!(isset($_SESSION['user']))) {
     </div>
 
 </section>
-<!-- about section ends -->
-
-<!-- courses section starts  -->
 
 
 
@@ -163,11 +150,8 @@ if(!(isset($_SESSION['user']))) {
 
 </footer>
 
-<!-- footer section ends -->
-<!-- swiper js link  -->
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
-<!-- custom js file link  -->
 <script src="js/script.js"></script>
 
 </body>

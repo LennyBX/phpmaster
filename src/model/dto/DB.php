@@ -17,6 +17,7 @@ class DB
         $this->PDO = $bdd;
     }
 
+
     /**
      * @return mixed
      */

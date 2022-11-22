@@ -459,3 +459,22 @@ section{
     padding-top: 20px;
     padding-bottom: 30px;
 }
+
+.input_button2{
+    margin-top: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+select{
+    position: absolute;
+    margin-bottom: 15px;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 305px;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px  #00E77F;
+    border-radius: 20px;
+}
