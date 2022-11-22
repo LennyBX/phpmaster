@@ -9,6 +9,7 @@
     <title>Admin FSI</title>
     <link rel="icon" type="image/pngn" href="../../public/img/FSI_logo.png">
 
+
     <!-- swiper css link  -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
