@@ -17,16 +17,6 @@ class DB
         $this->PDO = $bdd;
     }
 
-    public function connectUser(string $login, string $mdp): ?string{
-        $query_check_admin = $this->PDO->prepare("Select * from admin where LOG_ADM = :id_adm;");
-        $query_check_tuteur = $this->PDO->prepare("Select * from tuteur where LOG_TUT = :log_tut;");
-        $query_check_etudiant = $this->PDO->prepare("Select * from etudiant where LOG_ETU = :log_etu;");
-
-        if ($query_check_admin) return 'admin';
-        elseif ($query_check_tuteur) return 'tuteur';
-        elseif ($query_check_etudiant) return 'etudiant';
-        else return null;
-    }
 
     /**
      * @return mixed

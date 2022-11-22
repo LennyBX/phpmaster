@@ -48,7 +48,7 @@ require_once '../../config/appConfig.php';
                             </div>
 
                             <div class="form-group last mb-4">
-                                <label for="passwordComf">Confirmer Mot de passe</label>
+                                <label for="confirm-password">Confirmer Mot de passe</label>
                                 <input type="password" class="form-control" id="confirm-password">
                             </div>
                             <div class="d-flex mb-5 align-items-center">
