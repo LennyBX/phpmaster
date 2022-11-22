@@ -2,6 +2,7 @@
 
 namespace model\dao;
 
+use model\dto\ADMIN;
 use model\dto\ETUDIANT;
 
 class ETUDIANT_2SIO_DAO
@@ -103,5 +104,19 @@ class ETUDIANT_2SIO_DAO
                 ':idnote2' => null
             ]
         );
+    }
+
+    public function getByLogin(string $login): ?ETUDIANT {
+        $resultSet = NULL;
+        $req = $this->bdd->prepare('SELECT * FROM etudiant WHERE LOG_ETU = :log_etu;');
+        $res = $req->execute([':log_etu' => $login]);
+
+        if ($res !== FALSE) {
+            $tab = ($tmp = $req->fetch(\PDO::FETCH_ASSOC)) ? $tmp : null;
+            if(!is_null($tab)) {
+                $resultSet = new ETUDIANT($tab);
+            }
+        }
+        return $resultSet;
     }
 }
