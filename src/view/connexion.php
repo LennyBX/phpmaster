@@ -36,20 +36,20 @@ require_once '../../config/appConfig.php';
                             <h3>Connectez-Vous à <strong>  <img src="../../public/img/FSI_logo.png" style="width: 66px"></strong></h3>
                         </div>
 
-                        <form action="../controller/connexion_control.php" method="post">
+                        <form action="../controller/connexion_trait_control.php" method="post">
                             <div class="form-group first">
                                 <label for="username">Identifiant</label>
-                                <input type="text" class="form-control" id="username">
+                                <input type="text" class="form-control" name="username" id="username">
                             </div>
 
                             <div class="form-group last mb-4">
                                 <label for="password">Mot de passe</label>
-                                <input type="password" class="form-control" id="password">
+                                <input type="password" class="form-control" name="password" id="password">
                             </div>
 
                             <div class="form-group last mb-4">
                                 <label for="passwordComf">Confirmer Mot de passe</label>
-                                <input type="password" class="form-control" id="confirm-password">
+                                <input type="password" class="form-control" name="confirmPassword" id="confirmPassword">
                             </div>
                             <div class="d-flex mb-5 align-items-center">
                                 <label class="control control--checkbox mb-0"><span class="caption">Se souvenir de moi</span>
