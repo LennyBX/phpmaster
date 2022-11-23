@@ -102,7 +102,7 @@ if(!(isset($_SESSION['user']))) {
         <div class="box">
             <i class="fas fa-face-smile"></i>
             <div class="content">
-                <h3><?= count($repositoryEtudiant->getAll()) ?></h3>
+                <h3><?= count($repositoryAdmin->getAll()) ?></h3>
                 <p>Administrateurs</p>
             </div>
         </div>
