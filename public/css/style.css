@@ -400,6 +400,47 @@ section{
     color: white;
 }
 
+
+.content-table3 {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 17px;
+    width: 50%;
+    border-radius: 10px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table3 thead tr {
+    background-color: #00E77F;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.content-table3 th,
+.content-table3 td {
+    padding: 13px 27px;
+    color: white;
+}
+
+.content-table3 tbody tr {
+    border-bottom: 1px solid white;
+}
+
+.content-table3 tbody tr:nth-of-type(even) {
+    background-color: gray;
+}
+
+.content-table3 tbody tr:last-of-type {
+    border-bottom: 2px solid #00E77F;
+}
+
+.content-table3 tbody tr.active-row {
+    font-weight: bold;
+    color: white;
+}
+
 .container{
     position: relative;
     max-width: 900px;

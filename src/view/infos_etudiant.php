@@ -87,7 +87,7 @@ if(!(isset($_SESSION['user']))) {
 
     <div class="row">
         <div class="content">
-            <table class="content-table">
+            <table class="content-table3">
                 <thead>
                 <tr>
                     <th>Nom</th>
@@ -109,69 +109,11 @@ if(!(isset($_SESSION['user']))) {
                     <td>Cyber</td>
                     <td>06.09.98.09.33</td>
                     <td>1 SIO</td>
-                    <td> <a href="" style="color:floralwhite;">
-                            Editer</a></td>
-                    <td> <a href="" style="color:floralwhite;">
-                            Voir</a></td>
-                    <td> <a href="" style="color:floralwhite;">
-                            Voir</a></td>
-                </tr>
+                    <td> <a href="../controller/modif_etudiant_control.php?idEtudiant=<?= $_SESSION?>" style="color:floralwhite;"><img src="../../public/img/1160515.png" alt="" style="width:40px"/> </a></td>
+                    <td> <a href="../controller/modif_etudiant_control.php?idEtudiant=<?= $_SESSION?>" style="color:floralwhite;"><img src="../../public/img/51646.png" alt="" style="width:40px"/> </a></td>
 
-                <tr class="active-row">
-                    <td>Albert</td>
-                    <td>Inaya</td>
-                    <td>chirac@yahoo.fr</td>
-                    <td>Cyber</td>
-                    <td>06.09.98.09.33</td>
-                    <td>1 SIO</td>
-                    <td> <a href="" style="color:floralwhite;">
-                            Editer</a></td>
-                    <td> <a href="" style="color:floralwhite;">
-                            Voir</a></td>
-                    <td> <a href="" style="color:floralwhite;">
-                            Voir</a></td>
-                </tr>
-                <tr>
-                    <td>Albert</td>
-                    <td>Inaya</td>
-                    <td>chirac@yahoo.fr</td>
-                    <td>Cyber</td>
-                    <td>06.09.98.09.33</td>
-                    <td>1 SIO</td>
-                    <td> <a href="" style="color:floralwhite;">
-                            Editer</a></td>
-                    <td> <a href="" style="color:floralwhite;">
-                            Voir</a></td>
-                    <td> <a href="" style="color:floralwhite;">
-                            Voir</a></td>
-                </tr>
-                <tr>
-                    <td>Albert</td>
-                    <td>Inaya</td>
-                    <td>chirac@yahoo.fr</td>
-                    <td>Cyber</td>
-                    <td>06.09.98.09.33</td>
-                    <td>1 SIO</td>
-                    <td> <a href="" style="color:floralwhite;">
-                            Editer</a></td>
-                    <td> <a href="" style="color:floralwhite;">
-                            Voir</a></td>
-                    <td> <a href="" style="color:floralwhite;">
-                            Voir</a></td>
-                </tr>
-                <tr>
-                    <td>Albert</td>
-                    <td>Inaya</td>
-                    <td>chirac@yahoo.fr</td>
-                    <td>Cyber</td>
-                    <td>06.09.98.09.33</td>
-                    <td>1 SIO</td>
-                    <td> <a href="" style="color:floralwhite;">
-                            Editer</a></td>
-                    <td> <a href="" style="color:floralwhite;">
-                            Voir</a></td>
-                    <td> <a href="" style="color:floralwhite;">
-                            Voir</a></td>
+                    <td> <a href="../controller/modif_etudiant_control.php?idEtudiant=<?= $_SESSION?>" style="color:floralwhite;"><img src="../../public/img/51646.png" alt="" style="width:40px"/> </a></td>
+
                 </tr>
 
                 </tbody>
