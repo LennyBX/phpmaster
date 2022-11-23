@@ -120,5 +120,13 @@ class ETUDIANT_2SIO_DAO
         return $resultSet;
     }
 
+    public function affectEtud(int $id_tut, int $id_etu): bool{
+        $query_prepare = $this->bdd->prepare("Update etudiant set ID_TUT_ETU = :id_tut where ID_ETU = :id_etu;");
+        return $query_prepare->execute([
+            ':id_tut' => $id_tut,
+            ':id_etu' => $id_etu
+        ]);
+    }
+
 
 }

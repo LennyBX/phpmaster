@@ -1,7 +1,10 @@
 <?php
 require_once '../../config/appConfig.php';
-$mesEtudiants = $repositoryEtudiant->getAll();
+if(!(isset($_SESSION['user']))) {
+    header("location: ../controller/connexion_control.php");
+}
 
+$mesEtudiants = $repositoryEtudiant->getAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -79,7 +82,7 @@ $mesEtudiants = $repositoryEtudiant->getAll();
     <div class="row">
         <div class="content">
 
-            <form class="container">
+            <form class="container" method="post" action="../controller/affect_etud_control.php">
                 <div class="title">
                     <h1 class="affec">Affectation Etudiant </h1>
                 </div>
@@ -87,28 +90,28 @@ $mesEtudiants = $repositoryEtudiant->getAll();
                 <SELECT name="liste_etudiant" size="1" class="select1">
                     <OPTION selected disabled>Choisir un Etudiant en 3OLEN</OPTION>
                     <?php foreach ($mesEtudiants as $etudiant) { ?>
-                    <OPTION><?php echo $etudiant->getPREETU() . ' ' . $etudiant->getNOMETU() ?>
+                    <OPTION value="<?php echo $etudiant->getIDETU()?>"> <?php echo $etudiant->getPREETU() . ' ' . $etudiant->getNOMETU() ?>
                         <?php } ?>
                 </SELECT>
 
-                <SELECT name="liste_etudiant" size="1" class="select2">
+                <SELECT name="liste_etudiant1" size="1" class="select2">
                     <OPTION selected disabled>Choisir un Etudiant en 4OLEN</OPTION>
                     <?php foreach ($mesEtudiants as $etudiant) { ?>
-                    <OPTION><?php echo $etudiant->getPREETU() . ' ' . $etudiant->getNOMETU() ?>
+                    <OPTION value="<?php echo $etudiant->getIDETU()?>"> <?php echo $etudiant->getPREETU() . ' ' . $etudiant->getNOMETU() ?>
                         <?php } ?>
                 </SELECT>
 
-                <SELECT name="liste_etudiant" size="1" class="select3">
+                <SELECT name="liste_etudiant2" size="1" class="select3">
                     <OPTION selected disabled>Choisir un Etudiant en 5OLEN</OPTION>
                     <?php foreach ($mesEtudiants as $etudiant) { ?>
-                    <OPTION><?php echo $etudiant->getPREETU() . ' ' . $etudiant->getNOMETU() ?>
+                    <OPTION value="<?php echo $etudiant->getIDETU()?>"> <?php echo $etudiant->getPREETU() . ' ' . $etudiant->getNOMETU() ?>
                         <?php } ?>
                 </SELECT>
 
 
 
                 <div class="input_button2">
-                    <a href="#contact" class="btn">Affectez cette Etudiant</a>
+                    <button type="submit" class="btn" value="">Affectez cette Etudiant</button>
                 </div>
 
             </form>
