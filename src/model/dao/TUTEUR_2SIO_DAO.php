@@ -54,4 +54,25 @@ class TUTEUR_2SIO_DAO
         return $resultSet;
     }
 
+    public function changeInfos(int $id, string $nom, string $prenom, string $mail, int $tel)
+    {
+        $req = $this->bdd->prepare('UPDATE tuteur SET PRE_TUT = :prenom, NOM_TUT = :nom, MAI_TUT = :mail, TEL_TUT = :tel WHERE id_tut = :id;');
+        $res = $req->execute([
+                ':id' => $id,
+                ':nom' => $nom,
+                ':prenom' => $prenom,
+                ':mail' => $mail,
+                ':tel' => $tel
+            ]
+        );
+        return $this->getById($id);
+    }
+
+
+    public function deleteTuteur(int $id)
+    {
+        $req = $this->bdd->prepare('DELETE FROM tuteur WHERE id_tut = :id;');
+        $res = $req->execute([':id' => $id]);
+    }
+
 }

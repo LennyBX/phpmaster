@@ -25,3 +25,4 @@ $repositoryTuteur = new TUTEUR_2SIO_DAO($bdd);
 $repositoryNote1 = new NOTE_1_2SIO_DAO($bdd);
 $repositoryNote2 = new NOTE_2_2SIO_DAO($bdd);
 $repositoryDB = new \model\dao\DB_DAO($bdd);
+

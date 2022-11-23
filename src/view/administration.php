@@ -1,12 +1,11 @@
 <?php
 require_once '../../config/appConfig.php';
 
-/*if(!(isset($_SESSION['user']))) {
+if(!(isset($_SESSION['user']))) {
     header("location: ../controller/connexion_control.php");
-}*/
-
-$mesTuteurs = $repositoryTuteur->getAll();
-$id_supprimer = 1;
+} else {
+    $tuteur = $repositoryTuteur->getAll();
+}
 
 ?>
 <!DOCTYPE html>
@@ -107,17 +106,15 @@ $id_supprimer = 1;
                 </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($mesTuteurs as $tuteur) { ?>
+                <?php foreach ($tuteur as $value) { ?>
                     <tr>
-                        <td><?php echo $tuteur->getNOMTUT() ?></td>
-                        <td><?php echo $tuteur->getPRETUT() ?></td>
-                        <td><?php echo $tuteur->getTELTUT() ?></td>
-                        <td><?php echo $tuteur->getMDPTUT() ?></td>
-                        <td><?php echo $tuteur->getLOGTUT() ?></td>
-                        <td> <a href="#" style="color:floralwhite;">
-                                editer</a></td>
-                        <td > <a class="supprimer" href="#" style="color:floralwhite;">
-                                &cross;</a></td>
+                        <td><?php echo $value->getNOMTUT() ?></td>
+                        <td><?php echo $value->getPRETUT() ?></td>
+                        <td><?php echo $value->getTELTUT() ?></td>
+                        <td><?php echo $value->getMDPTUT() ?></td>
+                        <td><?php echo $value->getLOGTUT() ?></td>
+                        <td> <a href="../controller/modif_tuteur_control.php?idTuteur=<?= $value->getIDTUT(); ?>" style="color:floralwhite;"><img src="../../public/img/1160515.png" alt="" style="width:40px"/> </a></td>
+                        <td> <a href="../controller/modif_tuteur_trait_control.php?idTuteur=<?= $value->getIDTUT(); ?>&delete" style="color:floralwhite;"><img src="../../public/img/crossmark.png" alt="" style="width:40px"/> </a></td>
                         <td> <a c href="affectation_etudiants.php" style="color:floralwhite;">
                                 &plus;</a></td>
                     </tr>

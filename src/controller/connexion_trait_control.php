@@ -1,28 +1,25 @@
 <?php
 include_once '../../config/appConfig.php';
 
+if(isset($_POST['username']) && isset($_POST['password'])) {
+    $userType = $repositoryDB->authentifyUser($_POST['username'], $_POST['password']);
+    if($userType == "ADMIN") {
+        $_SESSION['user'] = $repositoryAdmin->getByLogin($_POST['username']);
+        $_SESSION['perm'] = $userType;
+        header("location: ../view/accueil.php");
+    } else if($userType == "TUTEUR") {
+        $_SESSION['user'] = $repositoryTuteur->getByLogin($_POST['username']);
+        $_SESSION['perm'] = $userType;
+        header("location: ../view/accueil.php");
+    } else if($userType == "ETUDIANT") {
+        $_SESSION['user'] = $repositoryEtudiant->getByLogin($_POST['username']);
+        $_SESSION['perm'] = $userType;
+        header("location: ../view/accueil.php");
+    } else {
+        header("location: ../view/connexion.php");
+    }
+} else {
+    header("location: ../view/connexion.php");
+}
 
-if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['confirmPassword'])) {
-
-    if ($_POST['password'] === $_POST['confirmPassword']){
-        $login = $_POST['username'];
-        $mdp = $_POST['password'];
-
-        $db_dao = new \model\dao\DB_DAO($bdd);
-        $user = $db_dao->connectUser($login, $_POST['password']);
-        if($user === 'admin'){
-            $_SESSION['admin'] = $repositoryAdmin->getByLogin($login);
-            header('Location: ../view/accueil.php');
-        } elseif ($user === 'tuteur'){
-            $_SESSION['tuteur'] = $repositoryTuteur->getByLogin($login);
-            header('Location: ../view/accueil.php');
-        } elseif ($user === 'etudiant'){
-            $_SESSION['etudiant'] = $repositoryEtudiant->getByLogin($login);
-            header('Location: ../view/accueil.php');
-        }else header('Location: ../view/connexion.php?erreur=pasDeCompte');
-
-
-    }else header('Location: ../view/connexion.php?erreur=mdpcomf');
-
-} else header('Location: ../view/connexion.php?erreur=champVide');
 

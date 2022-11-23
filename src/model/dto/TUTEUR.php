@@ -9,16 +9,17 @@ class TUTEUR
 
     private $ID_TUT;
     private $NOM_TUT;
-    private $PRE_TUT;
-    private $TEL_TUT;
-    private $LOG_TUT;
-    private $MDP_TUT;
-    private $ID_NOT_TUT;
+    private $MAI_TUT;
+
+
+
+
 
     /**
      * @param $ID_TUT
      * @param $NOM_TUT
      * @param $PRE_TUT
+     * @param $MAI_TUT
      * @param $TEL_TUT
      * @param $LOG_TUT
      * @param $MDP_TUT
@@ -28,12 +29,35 @@ class TUTEUR
     {
         $this->ID_TUT = $tab['ID_TUT'];
         $this->NOM_TUT = $tab['NOM_TUT'];
+        $this->MAI_TUT = $tab['MAI_TUT'];
         $this->PRE_TUT = $tab['PRE_TUT'];
         $this->TEL_TUT = $tab['TEL_TUT'];
         $this->LOG_TUT = $tab['LOG_TUT'];
         $this->MDP_TUT = $tab['MDP_TUT'];
         $this->ID_NOT_TUT = $tab['ID_NOT_TUT'];
     }
+    /**
+     * @return mixed
+     */
+    public function getMAITUT()
+    {
+        return $this->MAI_TUT;
+    }
+
+    /**
+     * @param mixed $MAI_TUT
+     */
+    public function setMAITUT($MAI_TUT): void
+    {
+        $this->MAI_TUT = $MAI_TUT;
+    }
+    private $PRE_TUT;
+    private $TEL_TUT;
+    private $LOG_TUT;
+    private $MDP_TUT;
+    private $ID_NOT_TUT;
+
+
 
     /**
      * @return mixed

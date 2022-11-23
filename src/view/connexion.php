@@ -38,18 +38,15 @@ require_once '../../config/appConfig.php';
 
                         <form action="../controller/connexion_trait_control.php" method="post">
                             <div class="form-group first">
-                                <label for="username">Identifiant</label>
-                                <input type="text" class="form-control" name="username" id="username">
+                                <input type="text" class="form-control" name="username" id="username" placeholder="Identifiant">
                             </div>
 
                             <div class="form-group last mb-4">
-                                <label for="password">Mot de passe</label>
-                                <input type="password" class="form-control" name="password" id="password">
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Mot de Passe">
                             </div>
 
                             <div class="form-group last mb-4">
-                                <label for="passwordComf">Confirmer Mot de passe</label>
-                                <input type="password" class="form-control" name="confirmPassword" id="confirmPassword">
+                                <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Comfirmer le Mot de Passe">
                             </div>
                             <div class="d-flex mb-5 align-items-center">
                                 <label class="control control--checkbox mb-0"><span class="caption">Se souvenir de moi</span>
