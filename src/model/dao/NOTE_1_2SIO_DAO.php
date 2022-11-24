@@ -39,7 +39,19 @@ class NOTE_1_2SIO_DAO
             }
         }
         return $resultSet;
-
     }
 
+    public function getByIdEtudiant(int $id_etu): ?NOTE_1 {
+        $resultSet = NULL;
+        $req = $this->bdd->prepare('SELECT note1.* FROM note1 INNER JOIN etudiant ON etudiant.ID_NOT_ETU = note1.ID_NOT_1 WHERE etudiant.ID_ETU = :id_etu;');
+        $res = $req->execute([':id_etu' => $id_etu]);
+
+        if ($res !== FALSE) {
+            $tab = ($tmp = $req->fetch(\PDO::FETCH_ASSOC)) ? $tmp : null;
+            if(!is_null($tab)) {
+                $resultSet = new NOTE_1($tab);
+            }
+        }
+        return $resultSet;
+    }
 }

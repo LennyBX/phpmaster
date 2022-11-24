@@ -2,7 +2,10 @@
 require_once '../../config/appConfig.php';
 if(!(isset($_SESSION['user']))) {
     header("location: ../controller/connexion_control.php");
+} else {
+    $bilan1 = $repositoryNote1->getByIdEtudiant(1);
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -74,7 +77,7 @@ if(!(isset($_SESSION['user']))) {
 
 
 <section class="about" id="about">
-
+    <?php if (!is_null($bilan1)): ?>
     <div class="row">
         <div class="content">
             <table class="content-table2">
@@ -89,42 +92,11 @@ if(!(isset($_SESSION['user']))) {
                 </thead>
                 <tbody>
                 <tr>
-                    <td>10/19/2022</td>
-                    <td>10</td>
-                    <td>19</td>
-                    <td>18</td>
-                    <td>De bonne compétences</td>
-                </tr>
-                <tr class="active-row2">
-                    <td>10/19/2022</td>
-                    <td>10</td>
-                    <td>19</td>
-                    <td>18</td>
-                    <td>De bonne compétences</td>
-                </tr>
-                <tr>
-                    <td>10/19/2022</td>
-                    <td>10</td>
-                    <td>19</td>
-                    <td>18</td>
-                    <td>De bonne compétences</td>
-
-                </tr>
-                <tr>
-                    <td>10/19/2022</td>
-                    <td>10</td>
-                    <td>19</td>
-                    <td>18</td>
-                    <td>De bonne compétences</td>
-
-                </tr>
-                <tr>
-                    <td>10/19/2022</td>
-                    <td>10</td>
-                    <td>19</td>
-                    <td>18</td>
-                    <td>De bonne compétences</td>
-
+                    <td><?= $bilan1->getDATBIL1(); ?></td>
+                    <td><?= $bilan1->getNOTENTNOT(); ?></td>
+                    <td><?= $bilan1->getNOTDOSNOT(); ?></td>
+                    <td><?= $bilan1->getNOTORANOT(); ?></td>
+                    <td><?= $bilan1->getREMNOTBIL1(); ?></td>
                 </tr>
 
                 </tbody>
@@ -132,9 +104,13 @@ if(!(isset($_SESSION['user']))) {
 
 
         </div>
-
+    <?php else:?>
+    <div class="row">
+        <div class="content">
+            <h2 style="color: white;">Cet étudiant ne possède pas de bilan 1 pour le moment...</h2>
+        </div>
     </div>
-
+    <?php endif; ?>
 </section>
 
 
