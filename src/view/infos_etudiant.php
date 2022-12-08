@@ -3,6 +3,10 @@ require_once '../../config/appConfig.php';
 if(!(isset($_SESSION['user']))) {
     header("location: ../controller/connexion_control.php");
 }
+
+$etudiant = $repositoryEtudiant->getById($_GET['idEtudiant']);
+$entreprise = $repositoryEntreprise->getById($etudiant->getIDENTETU());
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -87,32 +91,39 @@ if(!(isset($_SESSION['user']))) {
 
     <div class="row">
         <div class="content">
-            <table class="content-table3">
+            <table class="content-table4">
                 <thead>
                 <tr>
                     <th>Nom</th>
+                    <th>Prénom</th>
                     <th>Specialiter </th>
-                    <th>TEL</th>
                     <th>Sa classe</th>
                     <th>Entreprise</th>
                     <th>Sujet d'analyse</th>
+                    <th>Login</th>
+                    <th>Email</th>
+                    <th>Tel</th>
+                    <th>Adresse</th>
                     <th>Editer</th>
-                    <th>Bilan 1 </th>
+                    <th>Bilan 1</th>
                     <th>Bilan 2</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td>Albert</td>
-                    <td>Inaya</td>
-                    <td>chirac@yahoo.fr</td>
-                    <td>Cyber</td>
-                    <td>06.09.98.09.33</td>
-                    <td>1 SIO</td>
-                    <td> <a href="../controller/modif_etudiant_control.php?idEtudiant=<?= $_SESSION?>" style="color:floralwhite;"><img src="../../public/img/1160515.png" alt="" style="width:40px"/> </a></td>
-                    <td> <a href="../controller/modif_etudiant_control.php?idEtudiant=<?= $_SESSION?>" style="color:floralwhite;"><img src="../../public/img/51646.png" alt="" style="width:40px"/> </a></td>
-
-                    <td> <a href="../controller/modif_etudiant_control.php?idEtudiant=<?= $_SESSION?>" style="color:floralwhite;"><img src="../../public/img/51646.png" alt="" style="width:40px"/> </a></td>
+                    <td><?= $etudiant->getNOMETU(); ?></td>
+                    <td><?= $etudiant->getPREETU(); ?></td>
+                    <td><?= $etudiant->getSPEETU(); ?></td>
+                    <td><?= $etudiant->getCLAETU(); ?></td>
+                    <td><?= $entreprise != null ? $entreprise->getLIBENT() : '-----'; ?></td>
+                    <td><?= $etudiant->getNOMETU(); ?></td>
+                    <td><?= $etudiant->getLOGETU(); ?></td>
+                    <td><?= $etudiant->getMAIETU(); ?></td>
+                    <td><?= $etudiant->getTELETU(); ?></td>
+                    <td><?= $etudiant->getNUMRUEETU() . '  ' . $etudiant->getRUEETU() . ',  ' . $etudiant->getCPETU() . '  ' . $etudiant->getVILETU(); ?></td>
+                    <td> <a href="../controller/modif_etudiant_control.php" style="color:floralwhite;"><img src="../../public/img/1160515.png" alt="" style="width:40px"/> </a></td>
+                    <td> <a href="../controller/modif_etudiant_control.php" style="color:floralwhite;"><img src="../../public/img/51646.png" alt="" style="width:40px"/> </a></td>
+                    <td> <a href="../controller/modif_etudiant_control.php" style="color:floralwhite;"><img src="../../public/img/51646.png" alt="" style="width:40px"/> </a></td>
 
                 </tr>
 

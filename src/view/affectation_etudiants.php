@@ -94,14 +94,14 @@ $mesEtudiants = $repositoryEtudiant->getAll();
                         <?php } ?>
                 </SELECT>
 
-                <SELECT name="liste_etudiant1" size="1" class="select2">
+                <SELECT name="liste_etudiant" size="1" class="select2">
                     <OPTION selected disabled>Choisir un Etudiant en 4OLEN</OPTION>
                     <?php foreach ($mesEtudiants as $etudiant) { ?>
                     <OPTION value="<?php echo $etudiant->getIDETU()?>"> <?php echo $etudiant->getPREETU() . ' ' . $etudiant->getNOMETU() ?>
                         <?php } ?>
                 </SELECT>
 
-                <SELECT name="liste_etudiant2" size="1" class="select3">
+                <SELECT name="liste_etudiant" size="1" class="select3">
                     <OPTION selected disabled>Choisir un Etudiant en 5OLEN</OPTION>
                     <?php foreach ($mesEtudiants as $etudiant) { ?>
                     <OPTION value="<?php echo $etudiant->getIDETU()?>"> <?php echo $etudiant->getPREETU() . ' ' . $etudiant->getNOMETU() ?>

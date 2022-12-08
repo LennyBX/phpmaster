@@ -89,56 +89,56 @@ if(!(isset($_SESSION['user']))) {
 <!-- about section starts  -->
 <section class="about" id="about">
     <?php if (!is_null($etudiants)): ?>
-    <div class="row">
-        <div class="content">
-            <table class="content-table">
-                <thead>
-                <tr>
-                    <th>Nom</th>
-                    <th>Prénom</th>
-                    <th>Mail</th>
-                    <th>Spécialité</th>
-                    <th>Téléphone</th>
-                    <th>Classe</th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                </thead>
-                <tbody>
-
-                <?php
-                foreach ($etudiants as $value):
-                    ?>
-                <tr>
-                    <td><?= $value->getNOMETU(); ?></td>
-                    <td><?= $value->getPREETU(); ?></td>
-                    <td><?= $value->getMAIETU(); ?></td>
-                    <td><?= $value->getSPEETU(); ?></td>
-                    <td><?= $value->getTELETU(); ?></td>
-                    <td><?= $value->getCLAETU(); ?></td>
-                    <td> <a href="../controller/infos_etudiant_control.php?idEtudiant=<?= $value->getIDETU(); ?>" style="color:floralwhite;"><img src="../../public/img/189689.png" alt="" style="width:40px"/> </a></td>
-                    <td> <a href="../controller/modif_etudiant_control.php?idEtudiant=<?= $value->getIDETU(); ?>" style="color:floralwhite;"><img src="../../public/img/1160515.png" alt="" style="width:40px"/> </a></td>
-                </tr>
-                <?php endforeach; ?>
-
-                </tbody>
-
-
-            </table>
-
-
-        </div>
-
-    </div>
-    <?php else:?>
-    <section class="about" id="about">
-
         <div class="row">
             <div class="content">
-                <h2 style="color: white;">Vous ne possédez aucun étudiants pour le moment...</h2>
+                <table class="content-table">
+                    <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Mail</th>
+                        <th>Spécialité</th>
+                        <th>Téléphone</th>
+                        <th>Classe</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <?php
+                    foreach ($etudiants as $value):
+                        ?>
+                        <tr>
+                            <td><?= $value->getNOMETU(); ?></td>
+                            <td><?= $value->getPREETU(); ?></td>
+                            <td><?= $value->getMAIETU(); ?></td>
+                            <td><?= $value->getSPEETU(); ?></td>
+                            <td><?= $value->getTELETU(); ?></td>
+                            <td><?= $value->getCLAETU(); ?></td>
+                            <td> <a href="../view/infos_etudiant.php?idEtudiant=<?= $value->getIDETU(); ?>" style="color:floralwhite;"><img src="../../public/img/189689.png" alt="" style="width:40px"/> </a></td>
+                            <td> <a href="../controller/modif_etudiant_control.php?idEtudiant=<?= $value->getIDETU(); ?>" style="color:floralwhite;"><img src="../../public/img/1160515.png" alt="" style="width:40px"/> </a></td>
+                        </tr>
+                    <?php endforeach; ?>
+
+                    </tbody>
+
+
+                </table>
+
+
             </div>
+
         </div>
-    </section>
+    <?php else:?>
+        <section class="about" id="about">
+
+            <div class="row">
+                <div class="content">
+                    <h2 style="color: white;">Vous ne possédez aucun étudiants pour le moment...</h2>
+                </div>
+            </div>
+        </section>
     <?php endif; ?>
 </section>
 <!-- about section ends -->

@@ -546,3 +546,44 @@ section{
 .affec{
     margin-bottom: 50px ;
 }
+
+
+.content-table4 {
+    border-collapse: collapse;
+    margin-left: -180px;
+    font-size: 15px;
+    width: 30%;
+    border-radius: 10px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table4 thead tr {
+    background-color: #00E77F;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.content-table4 th,
+.content-table4 td {
+    padding: 13px 27px;
+    color: white;
+}
+
+.content-table4 tbody tr {
+    border-bottom: 1px solid white;
+}
+
+.content-table4 tbody tr:nth-of-type(even) {
+    background-color: gray;
+}
+
+.content-table4 tbody tr:last-of-type {
+    border-bottom: 2px solid #00E77F;
+}
+
+.content-table4 tbody tr.active-row {
+    font-weight: bold;
+    color: white;
+}

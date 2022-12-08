@@ -25,7 +25,7 @@ if(!(isset($_SESSION['user']))) {
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet"/>
 
-    <link href="css/main.css" rel="stylesheet">
+    <link href="../../public/css/style.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e3c4ffb28a.js" crossorigin="anonymous"></script>
 
     <!-- custom css file link  -->
