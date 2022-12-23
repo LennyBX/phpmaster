@@ -121,9 +121,9 @@ $entreprise = $repositoryEntreprise->getById($etudiant->getIDENTETU());
                     <td><?= $etudiant->getMAIETU(); ?></td>
                     <td><?= $etudiant->getTELETU(); ?></td>
                     <td><?= $etudiant->getNUMRUEETU() . '  ' . $etudiant->getRUEETU() . ',  ' . $etudiant->getCPETU() . '  ' . $etudiant->getVILETU(); ?></td>
-                    <td> <a href="../controller/modif_etudiant_control.php" style="color:floralwhite;"><img src="../../public/img/1160515.png" alt="" style="width:40px"/> </a></td>
-                    <td> <a href="../controller/modif_etudiant_control.php" style="color:floralwhite;"><img src="../../public/img/51646.png" alt="" style="width:40px"/> </a></td>
-                    <td> <a href="../controller/modif_etudiant_control.php" style="color:floralwhite;"><img src="../../public/img/51646.png" alt="" style="width:40px"/> </a></td>
+                    <td> <a href="../controller/modif_etudiant_control.php?idEtudiant=<?php echo $etudiant->getIDETU(); ?>" style="color:floralwhite;"><img src="../../public/img/1160515.png" alt="" style="width:40px"/> </a></td>
+                    <td> <a href="../controller/bilan1_control.php?idEtudiant=<?php echo $etudiant->getIDETU(); ?>" style="color:floralwhite;"><img src="../../public/img/51646.png" alt="" style="width:40px"/> </a></td>
+                    <td> <a href="../controller/bilan2_control.php?idEtudiant=<?php echo $etudiant->getIDETU(); ?>" style="color:floralwhite;"><img src="../../public/img/51646.png" alt="" style="width:40px"/> </a></td>
 
                 </tr>
 

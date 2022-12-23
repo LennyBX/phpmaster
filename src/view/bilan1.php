@@ -2,9 +2,9 @@
 require_once '../../config/appConfig.php';
 if(!(isset($_SESSION['user']))) {
     header("location: ../controller/connexion_control.php");
-} else {
-    $bilan1 = $repositoryNote1->getByIdEtudiant(1);
 }
+
+$note1_etu = $_SESSION['bilan1_etudiant'];
 
 ?>
 <!DOCTYPE html>
@@ -77,7 +77,7 @@ if(!(isset($_SESSION['user']))) {
 
 
 <section class="about" id="about">
-    <?php if (!is_null($bilan1)): ?>
+    <?php if (!is_null($note1_etu)): ?>
     <div class="row">
         <div class="content">
             <table class="content-table2">
@@ -92,18 +92,18 @@ if(!(isset($_SESSION['user']))) {
                 </thead>
                 <tbody>
                 <tr>
-                    <td><?= $bilan1->getDATBIL1(); ?></td>
-                    <td><?= $bilan1->getNOTENTNOT(); ?></td>
-                    <td><?= $bilan1->getNOTDOSNOT(); ?></td>
-                    <td><?= $bilan1->getNOTORANOT(); ?></td>
-                    <td><?= $bilan1->getREMNOTBIL1(); ?></td>
+                    <td><?= $note1_etu->getDATBIL1(); ?></td>
+                    <td><?= $note1_etu->getNOTENTNOT(); ?></td>
+                    <td><?= $note1_etu->getNOTDOSNOT(); ?></td>
+                    <td><?= $note1_etu->getNOTORANOT(); ?></td>
+                    <td><?= $note1_etu->getREMNOTBIL1(); ?></td>
                 </tr>
 
                 </tbody>
             </table>
 
-
         </div>
+    </div>
     <?php else:?>
     <div class="row">
         <div class="content">

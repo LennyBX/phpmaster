@@ -3,6 +3,8 @@ require_once '../../config/appConfig.php';
 if(!(isset($_SESSION['user']))) {
     header("location: ../controller/connexion_control.php");
 }
+
+$note2_etu = $_SESSION['bilan2_etudiant'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -84,62 +86,38 @@ if(!(isset($_SESSION['user']))) {
 
 <!-- about section starts  -->
 <section class="about" id="about">
-
+    <?php if (!is_null($note2_etu)): ?>
     <div class="row">
         <div class="content">
             <table class="content-table2">
                 <thead>
-                <tr>
-                    <th>La date du bilan 2
-                    </th>
-                    <th>La note du dossier  </th>
-                    <th>La note d’oral </th>
-                    <th>Des remarques éventuelles</th>
-                </tr>
+                    <tr>
+                        <th>La date du bilan 2</th>
+                        <th>La note du dossier  </th>
+                        <th>La note d’oral </th>
+                        <th>La note fixée par l'entreprise </th>
+                        <th>Des remarques éventuelles</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>10/19/2022</td>
-                    <td>10</td>
-                    <td>19</td>
-                    <td>De bonne compétences</td>
-                </tr>
-                <tr class="active-row2">
-                    <td>10/19/2022</td>
-                    <td>10</td>
-                    <td>19</td>
-                    <td>De bonne compétences</td>
-                </tr>
-                <tr>
-                    <td>10/19/2022</td>
-                    <td>10</td>
-                    <td>19</td>
-                    <td>De bonne compétences</td>
-
-                </tr>
-                <tr>
-                    <td>10/19/2022</td>
-                    <td>10</td>
-                    <td>19</td>
-                    <td>De bonne compétences</td>
-
-                </tr>
-                <tr>
-                    <td>10/19/2022</td>
-                    <td>10</td>
-                    <td>19</td>
-                    <td>De bonne compétences</td>
-
-                </tr>
-
+                    <tr>
+                        <td><?= $note2_etu->getDATNOTBIL2(); ?></td>
+                        <td><?= $note2_etu->getNOTDOSBIL2(); ?></td>
+                        <td><?= $note2_etu->getNOTORABIL2(); ?></td>
+                        <td><?= $note2_etu->getNOTENTNOTBIL2(); ?></td>
+                        <td><?= $note2_etu->getREMNOTBIL2(); ?></td>
+                    </tr>
                 </tbody>
             </table>
-
-
         </div>
-
     </div>
-
+    <?php else:?>
+        <div class="row">
+            <div class="content">
+                <h2 style="color: white;">Cet étudiant ne possède pas de bilan 1 pour le moment...</h2>
+            </div>
+        </div>
+    <?php endif; ?>
 </section>
 <!-- about section ends -->
 
