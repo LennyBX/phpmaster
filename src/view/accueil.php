@@ -3,7 +3,8 @@ require_once '../../config/appConfig.php';
 if(!(isset($_SESSION['user']))) {
     header("location: ../controller/connexion_control.php");
 }
-
+    $note1_non_note = $repositoryTuteur->mesEtudiantsSansNote1($_SESSION['user']->getIDTUT());
+    $note2_non_note = $repositoryTuteur->mesEtudiantsSansNote2($_SESSION['user']->getIDTUT());
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -45,7 +46,12 @@ if(!(isset($_SESSION['user']))) {
         <nav class="navbar">
             <a href="../controller/accueil_control.php">Accueil</a>
             <a href="../controller/liste_etudiants_control.php">Liste étudiants</a>
+            <?php if(isset($_SESSION['perm']) && $_SESSION['perm']=="ADMIN"){   ?>
             <a href="../controller/administration_control.php">Paramètres</a>
+            <?php
+            }
+            else echo "";
+            ?>
             <a href="../controller/deconnexion_control.php">Déconnexion</a>
         </nav>
 
@@ -75,26 +81,59 @@ if(!(isset($_SESSION['user']))) {
     <div class="box-container">
 
         <div class="box">
-            <i class="fas fa-user-graduate"></i>
+            <i class="fas fa-file-contract"></i>
             <div class="content">
-                <h3><?= count($repositoryEtudiant->getAll()) ?></h3>
-                <p>Eleves</p>
+                <h3><?= count($repositoryTuteur->mesEtudiantsSansNote1($_SESSION['user']->getIDTUT())) -1 ?></h3>
+                <p>Elèves sans note 1 <span class="plus-options-accueil" onclick="plusInfoAccueil(this)">&CenterDot;&CenterDot;&CenterDot;</span></p>
+                <div class="content-plus-infos">
+                    <?php if ((count($note1_non_note) - 1) > 0):
+                    foreach ($note1_non_note as $e){
+                        if ($e!=null){?>
+                            <a href="infos_etudiant.php?idEtudiant=<?= $e->getIDETU(); ?>"><h3 class="eleve-clickable"><?= $e->getNOMETU() ?></h3></a>
+                    <p class="eleve_p"><?= $e->getPREETU() ?></p>
+                    <?php
+                        }
+                    }
+                    else:
+                    ?>
+                    <p>aucuns élèves non notés</p>
+                    <?php
+                    endif;
+                    ?>
+                </div>
             </div>
         </div>
 
+
         <div class="box">
-            <i class="fas fa-chalkboard-user"></i>
+            <i class="fas fa-file-contract"></i>
             <div class="content">
-                <h3><?= count($repositoryTuteur->getAll()) ?></h3>
-                <p>Tuteurs</p>
+                <h3><?= count($repositoryTuteur->mesEtudiantsSansNote2($_SESSION['user']->getIDTUT())) -1 ?></h3>
+                <p>Elèves sans note 2 <span class="plus-options-accueil" onclick="plusInfoAccueil(this)">&CenterDot;&CenterDot;&CenterDot;</span></p>
+                <div class="content-plus-infos">
+                    <?php if ((count($note2_non_note) - 1) > 0):
+                        foreach ($note2_non_note as $e){
+                            if ($e!=null){?>
+                                <a href="infos_etudiant.php?idEtudiant=<?= $e->getIDETU(); ?>"><h3 class="eleve-clickable"><?= $e->getNOMETU() ?></h3></a>
+                                <p class="eleve_p"><?= $e->getPREETU() ?></p>
+                                <?php
+                            }
+                        }
+                    else:
+                        ?>
+                        <p>aucuns élèves non notés</p>
+                    <?php
+                    endif;
+                    ?>
+                </div>
             </div>
         </div>
 
         <div class="box">
             <i class="fas fa-face-smile"></i>
             <div class="content">
-                <h3><?= count($repositoryAdmin->getAll()) ?></h3>
-                <p>Administrateurs</p>
+                <h3><?= count($repositoryEtudiant->getAll()) ?></h3>
+                <p>Etudiants</p>
             </div>
         </div>
 
@@ -144,7 +183,8 @@ if(!(isset($_SESSION['user']))) {
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
 <!-- custom js file link  -->
-<script src="js/script.js"></script>
+<script src="../scripts/script.js"></script>
+
 
 </body>
 </html>

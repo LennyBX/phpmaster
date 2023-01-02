@@ -11,4 +11,22 @@ function suppTuteur(){
     }));
 }
 
-suppTuteur();
+function plusInfoAccueil(el){
+    let visibility;
+    let opacity;
+    if (el.innerText.toLowerCase() === 'cacher'){
+        visibility = 'hidden';
+        opacity = 0;
+        el.innerText = '...';
+    }else {
+        visibility = "visible";
+        opacity = 1;
+        el.innerText = 'cacher';
+    }
+    const p = el.parentNode;
+    const content = p.parentNode;
+    const info = content.lastElementChild;
+    info.style.visibility = visibility;
+    info.style.opacity = opacity;
+}
+

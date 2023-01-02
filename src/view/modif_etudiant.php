@@ -45,7 +45,12 @@ if(!(isset($_SESSION['user']))) {
         <nav class="navbar">
             <a href="../controller/accueil_control.php">Accueil</a>
             <a href="../controller/liste_etudiants_control.php">Liste étudiants</a>
-            <a href="../controller/administration_control.php">Paramètres</a>
+            <?php if(isset($_SESSION['perm']) && $_SESSION['perm']=="ADMIN"){   ?>
+                <a href="../controller/administration_control.php">Paramètres</a>
+                <?php
+            }
+            else echo "";
+            ?>
             <a href="../controller/deconnexion_control.php">Déconnexion</a>
         </nav>
 

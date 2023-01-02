@@ -2,6 +2,7 @@
 
 namespace model\dao;
 
+use model\dto\ETUDIANT;
 use model\dto\TUTEUR;
 
 class TUTEUR_2SIO_DAO
@@ -73,6 +74,40 @@ class TUTEUR_2SIO_DAO
     {
         $req = $this->bdd->prepare('DELETE FROM tuteur WHERE id_tut = :id;');
         $res = $req->execute([':id' => $id]);
+    }
+
+    public function mesEtudiantsSansNote1(int $id_tut): array{
+        $etudiants[] = null;
+        $req = $this->bdd->prepare('SELECT * from etudiant where ID_TUT_ETU = :id_tut and ID_NOT_ETU is null;');
+        $res = $req->execute([
+                ':id_tut' => $id_tut
+            ]
+        );
+        if ($req) {
+            $req->setFetchMode(\PDO::FETCH_ASSOC);
+            foreach ($req as $row) {
+                $etudiants[] = new ETUDIANT($row);
+
+            }
+        }
+        return $etudiants;
+    }
+
+    public function mesEtudiantsSansNote2(int $id_tut): array{
+        $etudiants[] = null;
+        $req = $this->bdd->prepare('SELECT * from etudiant where ID_TUT_ETU = :id_tut and ID_NOT_ETU_BIL_2 is null;');
+        $res = $req->execute([
+                ':id_tut' => $id_tut
+            ]
+        );
+        if ($req) {
+            $req->setFetchMode(\PDO::FETCH_ASSOC);
+            foreach ($req as $row) {
+                $etudiants[] = new ETUDIANT($row);
+
+            }
+        }
+        return $etudiants;
     }
 
 }
