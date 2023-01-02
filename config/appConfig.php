@@ -15,7 +15,7 @@ use model\dao\NOTE_1_2SIO_DAO;
 use model\dao\NOTE_2_2SIO_DAO;
 use model\dao\TUTEUR_2SIO_DAO;
 
-$bdd = new \model\dto\DB("localhost", "	p2023_2sio_projet_tutorat", "root", "");
+$bdd = new \model\dto\DB("localhost", "p2023_2sio_projet_tutorat", "root", "");
 $bdd = $bdd->getPDO();
 
 $repositoryAdmin = new ADMIN_2SIO_DAO($bdd);
