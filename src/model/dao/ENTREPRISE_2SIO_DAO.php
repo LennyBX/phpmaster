@@ -27,7 +27,10 @@ class ENTREPRISE_2SIO_DAO
         return $resultSet;
     }
 
-    public function getById(int $id_ent): ?ENTREPRISE {
+    public function getById(?int $id_ent): ?ENTREPRISE {
+        if ($id_ent == null){
+            return null;
+        }
         $resultSet = NULL;
         $req = $this->bdd->prepare('SELECT * FROM entreprise WHERE id_ent = :id_ent;');
         $res = $req->execute([':id_ent' => $id_ent]);

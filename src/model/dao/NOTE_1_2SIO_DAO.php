@@ -41,7 +41,10 @@ class NOTE_1_2SIO_DAO
         return $resultSet;
     }
 
-    public function getByIdEtudiant(int $id_etu): ?NOTE_1 {
+    public function getByIdEtudiant(?int $id_etu): ?NOTE_1 {
+        if ($id_etu == null){
+            return null;
+        }
         $resultSet = NULL;
         $req = $this->bdd->prepare('SELECT note1.* FROM note1 INNER JOIN etudiant ON etudiant.ID_NOT_ETU = note1.ID_NOT_1 WHERE etudiant.ID_ETU = :id_etu;');
         $res = $req->execute([':id_etu' => $id_etu]);
