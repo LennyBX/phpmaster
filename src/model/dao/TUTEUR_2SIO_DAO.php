@@ -75,4 +75,18 @@ class TUTEUR_2SIO_DAO
         $res = $req->execute([':id' => $id]);
     }
 
+
+
+    public function getAllEtudiant(int $ID_TUT) : ?String
+    {
+        $req = $this->bdd->prepare('Select count(*) from etudiant where ID_TUT_ETU= :ID_TUT');
+
+        $res = $req->execute([
+                ':ID_TUT' => $ID_TUT
+            ]
+        );
+        return $req->fetchColumn();
+    }
+
+
 }

@@ -37,24 +37,7 @@ if(!(isset($_SESSION['user']))) {
 <body>
 
 <!-- header section starts  -->
-<header class="header">
-
-    <section class="flex">
-
-        <img src="../../public/img/FSI_logo.png" style="width: 60px">
-        <nav class="navbar">
-            <a href="../controller/accueil_control.php">Accueil</a>
-            <a href="../controller/liste_etudiants_control.php">Liste étudiants</a>
-            <a href="../controller/administration_control.php">Paramètres</a>
-            <a href="../controller/deconnexion_control.php">Déconnexion</a>
-        </nav>
-
-        <div id="menu-btn" class="fas fa-bars"></div>
-
-    </section>
-
-</header>
-
+<?php require_once 'navbar.php'; ?>
 <!-- header section ends -->
 
 <!-- home section starts  -->
@@ -130,17 +113,7 @@ if(!(isset($_SESSION['user']))) {
 <!-- courses section starts  -->
 
 
-
-<footer class="footer">
-
-    <section>
-
-
-        <div class="credit">&copy; copyright @ 2022 by <span>PHPMASTER Group</span> | all rights reserved!</div>
-
-    </section>
-
-</footer>
+<?php require_once 'footer.php'; ?>
 
 <!-- footer section ends -->
 <!-- swiper js link  -->

@@ -4,6 +4,7 @@ namespace model\dao;
 
 use model\dto\ADMIN;
 use model\dto\ETUDIANT;
+use model\dto\TUTEUR;
 
 class ETUDIANT_2SIO_DAO
 {
@@ -127,6 +128,53 @@ class ETUDIANT_2SIO_DAO
             ':id_etu' => $id_etu
         ]);
     }
+
+    public function getAll3OLEN() : ?array
+    {
+        $resultSet = NULL;
+        $req = $this->bdd->query('SELECT * FROM etudiant where CLA_ETU like "3OLEN%" AND ID_TUT_ETU is null');
+
+        if ($req) {
+            $req->setFetchMode(\PDO::FETCH_ASSOC);
+            foreach ($req as $row) {
+                $resultSet[] = new ETUDIANT($row);
+
+            }
+        }
+        return $resultSet;
+    }
+
+    public function getAll4OLEN() : ?array
+    {
+        $resultSet = NULL;
+        $req = $this->bdd->query('SELECT * FROM etudiant where CLA_ETU like "4OLEN%" AND ID_TUT_ETU is null');
+
+        if ($req) {
+            $req->setFetchMode(\PDO::FETCH_ASSOC);
+            foreach ($req as $row) {
+                $resultSet[] = new ETUDIANT($row);
+
+            }
+        }
+        return $resultSet;
+    }
+
+    public function getAll5OLEN() : ?array
+    {
+        $resultSet = NULL;
+        $req = $this->bdd->query('SELECT * FROM etudiant where CLA_ETU like "5OLEN%" AND ID_TUT_ETU is null');
+
+        if ($req) {
+            $req->setFetchMode(\PDO::FETCH_ASSOC);
+            foreach ($req as $row) {
+                $resultSet[] = new ETUDIANT($row);
+
+            }
+        }
+        return $resultSet;
+    }
+
+
 
 
 }

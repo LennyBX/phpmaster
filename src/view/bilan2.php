@@ -36,29 +36,11 @@ if(!(isset($_SESSION['user']))) {
 </head>
 <body>
 
-<!-- header section starts  -->
 
-<header class="header">
 
-    <section class="flex">
+<?php require_once 'navbar.php'; ?>
 
-        <img src="../../public/img/FSI_logo.png" style="width: 60px">
-        <nav class="navbar">
-            <a href="../controller/accueil_control.php">Accueil</a>
-            <a href="../controller/liste_etudiants_control.php">Liste étudiants</a>
-            <a href="../controller/administration_control.php">Paramètres</a>
-            <a href="../controller/deconnexion_control.php">Déconnexion</a>
-        </nav>
 
-        <div id="menu-btn" class="fas fa-bars"></div>
-
-    </section>
-
-</header>
-
-<!-- header section ends -->
-
-<!-- home section starts  -->
 <section class="home" id="home">
 
     <div class="row">
@@ -75,14 +57,7 @@ if(!(isset($_SESSION['user']))) {
 
 </section>
 
-<!-- home section ends -->
 
-<!-- couter section stars  -->
-
-
-<!-- couter section ends -->
-
-<!-- about section starts  -->
 <section class="about" id="about">
 
     <div class="row">
@@ -141,25 +116,13 @@ if(!(isset($_SESSION['user']))) {
     </div>
 
 </section>
-<!-- about section ends -->
-
-<!-- courses section starts  -->
 
 
 
-<footer class="footer">
 
-    <section>
+<?php require_once 'footer.php'; ?>
 
 
-        <div class="credit">&copy; copyright @ 2022 by <span>PHPMASTER Group</span> | all rights reserved!</div>
-
-    </section>
-
-</footer>
-
-<!-- footer section ends -->
-<!-- swiper js link  -->
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
 <!-- custom js file link  -->

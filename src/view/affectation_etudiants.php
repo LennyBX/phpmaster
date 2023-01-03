@@ -4,7 +4,9 @@ if(!(isset($_SESSION['user']))) {
     header("location: ../controller/connexion_control.php");
 }
 
-$mesEtudiants = $repositoryEtudiant->getAll();
+$mesEtudiants3OLEN = $repositoryEtudiant->getAll3OLEN();
+$mesEtudiants4OLEN = $repositoryEtudiant->getAll4OLEN();
+$mesEtudiants5OLEN = $repositoryEtudiant->getAll5OLEN();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,24 +40,7 @@ $mesEtudiants = $repositoryEtudiant->getAll();
 </head>
 <body>
 
-
-<header class="header">
-
-    <section class="flex">
-
-        <img src="../../public/img/FSI_logo.png" style="width: 60px">
-        <nav class="navbar">
-            <a href="../controller/accueil_control.php">Accueil</a>
-            <a href="../controller/liste_etudiants_control.php">Liste étudiants</a>
-            <a href="../controller/administration_control.php">Paramètres</a>
-            <a href="../controller/deconnexion_control.php">Déconnexion</a>
-        </nav>
-
-        <div id="menu-btn" class="fas fa-bars"></div>
-
-    </section>
-
-</header>
+<?php require_once 'navbar.php'; ?>
 
 <section class="home" id="home">
 
@@ -89,21 +74,21 @@ $mesEtudiants = $repositoryEtudiant->getAll();
 
                 <SELECT name="liste_etudiant" size="1" class="select1">
                     <OPTION selected disabled>Choisir un Etudiant en 3OLEN</OPTION>
-                    <?php foreach ($mesEtudiants as $etudiant) { ?>
+                    <?php foreach ($mesEtudiants3OLEN as $etudiant) { ?>
                     <OPTION value="<?php echo $etudiant->getIDETU()?>"> <?php echo $etudiant->getPREETU() . ' ' . $etudiant->getNOMETU() ?>
                         <?php } ?>
                 </SELECT>
 
                 <SELECT name="liste_etudiant" size="1" class="select2">
                     <OPTION selected disabled>Choisir un Etudiant en 4OLEN</OPTION>
-                    <?php foreach ($mesEtudiants as $etudiant) { ?>
+                    <?php foreach ($mesEtudiants4OLEN as $etudiant) { ?>
                     <OPTION value="<?php echo $etudiant->getIDETU()?>"> <?php echo $etudiant->getPREETU() . ' ' . $etudiant->getNOMETU() ?>
                         <?php } ?>
                 </SELECT>
 
                 <SELECT name="liste_etudiant" size="1" class="select3">
                     <OPTION selected disabled>Choisir un Etudiant en 5OLEN</OPTION>
-                    <?php foreach ($mesEtudiants as $etudiant) { ?>
+                    <?php foreach ($mesEtudiants5OLEN as $etudiant) { ?>
                     <OPTION value="<?php echo $etudiant->getIDETU()?>"> <?php echo $etudiant->getPREETU() . ' ' . $etudiant->getNOMETU() ?>
                         <?php } ?>
                 </SELECT>
@@ -123,16 +108,7 @@ $mesEtudiants = $repositoryEtudiant->getAll();
 </section>
 
 
-<footer class="footer">
-
-    <section>
-
-
-        <div class="credit">&copy; copyright @ 2022 by <span>PHPMASTER Group</span> | all rights reserved!</div>
-
-    </section>
-
-</footer>
+<?php require_once 'footer.php'; ?>
 
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
