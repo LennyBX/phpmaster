@@ -147,7 +147,15 @@ if ($_SESSION['perm'] === "TUTEUR"){
             </div>
             <?php endif; ?>
         </div>
-
+        <?php if ($_SESSION['perm'] === "TUTEUR") : ?>
+        <div class="box">
+            <i class="fas fa-face-smile"></i>
+            <div class="content">
+                <h3><?= count($repositoryEtudiant->getAllByTuteur($_SESSION['user']->getIDTUT())) ?></h3>
+                <p>Etudiants</p>
+            </div>
+        </div>
+        <?php else : ?>
         <div class="box">
             <i class="fas fa-face-smile"></i>
             <div class="content">
@@ -155,7 +163,7 @@ if ($_SESSION['perm'] === "TUTEUR"){
                 <p>Etudiants</p>
             </div>
         </div>
-
+        <?php endif; ?>
     </div>
 
 </section>

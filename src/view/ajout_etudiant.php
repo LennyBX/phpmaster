@@ -2,6 +2,8 @@
 require_once '../../config/appConfig.php';
 if(!(isset($_SESSION['user']))) {
     header("location: ../controller/connexion_control.php");
+}elseif (isset($_SESSION['perm']) && $_SESSION['perm'] !== "ADMIN"){
+    header("location: ../controller/connexion_control.php");
 }
 ?>
 <!DOCTYPE html>
