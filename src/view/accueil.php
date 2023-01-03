@@ -3,8 +3,11 @@ require_once '../../config/appConfig.php';
 if(!(isset($_SESSION['user']))) {
     header("location: ../controller/connexion_control.php");
 }
+if ($_SESSION['perm'] === "TUTEUR"){
     $note1_non_note = $repositoryTuteur->mesEtudiantsSansNote1($_SESSION['user']->getIDTUT());
     $note2_non_note = $repositoryTuteur->mesEtudiantsSansNote2($_SESSION['user']->getIDTUT());
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -81,6 +84,7 @@ if(!(isset($_SESSION['user']))) {
     <div class="box-container">
 
         <div class="box">
+            <?php if ($_SESSION['perm'] === "TUTEUR") : ?>
             <i class="fas fa-file-contract"></i>
             <div class="content">
                 <h3><?= count($repositoryTuteur->mesEtudiantsSansNote1($_SESSION['user']->getIDTUT())) -1 ?></h3>
@@ -102,10 +106,18 @@ if(!(isset($_SESSION['user']))) {
                     ?>
                 </div>
             </div>
+            <?php else : ?>
+            <i class="fa-solid fa-user-graduate"></i>
+            <div class="content">
+                <h3><?= count($repositoryTuteur->getAll()) ?></h3>
+                <p>Tuteurs</p>
+            </div>
+            <?php endif; ?>
         </div>
 
 
         <div class="box">
+            <?php if ($_SESSION['perm'] === "TUTEUR") : ?>
             <i class="fas fa-file-contract"></i>
             <div class="content">
                 <h3><?= count($repositoryTuteur->mesEtudiantsSansNote2($_SESSION['user']->getIDTUT())) -1 ?></h3>
@@ -127,6 +139,13 @@ if(!(isset($_SESSION['user']))) {
                     ?>
                 </div>
             </div>
+            <?php else : ?>
+                <i class="fa-sharp fa-solid fa-screwdriver-wrench"></i>
+            <div class="content">
+                <h3><?= count($repositoryTuteur->getAll()) ?></h3>
+                <p>Admins</p>
+            </div>
+            <?php endif; ?>
         </div>
 
         <div class="box">
