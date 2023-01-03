@@ -3,6 +3,8 @@ require_once '../../config/appConfig.php';
 if(!(isset($_SESSION['user']))) {
     header("location: ../controller/connexion_control.php");
 }
+
+$note2_etu = $_SESSION['bilan2_etudiant'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -36,11 +38,34 @@ if(!(isset($_SESSION['user']))) {
 </head>
 <body>
 
+<!-- header section starts  -->
 
+<header class="header">
 
-<?php require_once 'navbar.php'; ?>
+    <section class="flex">
 
+        <img src="../../public/img/FSI_logo.png" style="width: 60px">
+        <nav class="navbar">
+            <a href="../controller/accueil_control.php">Accueil</a>
+            <a href="../controller/liste_etudiants_control.php">Liste étudiants</a>
+            <?php if(isset($_SESSION['perm']) && $_SESSION['perm']=="ADMIN"){   ?>
+                <a href="../controller/administration_control.php">Paramètres</a>
+                <?php
+            }
+            else echo "";
+            ?>
+            <a href="../controller/deconnexion_control.php">Déconnexion</a>
+        </nav>
 
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </section>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
 <section class="home" id="home">
 
     <div class="row">
@@ -57,72 +82,67 @@ if(!(isset($_SESSION['user']))) {
 
 </section>
 
+<!-- home section ends -->
 
+<!-- couter section stars  -->
+
+
+<!-- couter section ends -->
+
+<!-- about section starts  -->
 <section class="about" id="about">
-
+    <?php if (!is_null($note2_etu)): ?>
     <div class="row">
         <div class="content">
             <table class="content-table2">
                 <thead>
-                <tr>
-                    <th>La date du bilan 2
-                    </th>
-                    <th>La note du dossier  </th>
-                    <th>La note d’oral </th>
-                    <th>Des remarques éventuelles</th>
-                </tr>
+                    <tr>
+                        <th>La date du bilan 2</th>
+                        <th>La note du dossier  </th>
+                        <th>La note d’oral </th>
+                        <th>La note fixée par l'entreprise </th>
+                        <th>Des remarques éventuelles</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>10/19/2022</td>
-                    <td>10</td>
-                    <td>19</td>
-                    <td>De bonne compétences</td>
-                </tr>
-                <tr class="active-row2">
-                    <td>10/19/2022</td>
-                    <td>10</td>
-                    <td>19</td>
-                    <td>De bonne compétences</td>
-                </tr>
-                <tr>
-                    <td>10/19/2022</td>
-                    <td>10</td>
-                    <td>19</td>
-                    <td>De bonne compétences</td>
-
-                </tr>
-                <tr>
-                    <td>10/19/2022</td>
-                    <td>10</td>
-                    <td>19</td>
-                    <td>De bonne compétences</td>
-
-                </tr>
-                <tr>
-                    <td>10/19/2022</td>
-                    <td>10</td>
-                    <td>19</td>
-                    <td>De bonne compétences</td>
-
-                </tr>
-
+                    <tr>
+                        <td><?= $note2_etu->getDATNOTBIL2(); ?></td>
+                        <td><?= $note2_etu->getNOTDOSBIL2(); ?></td>
+                        <td><?= $note2_etu->getNOTORABIL2(); ?></td>
+                        <td><?= $note2_etu->getNOTENTNOTBIL2(); ?></td>
+                        <td><?= $note2_etu->getREMNOTBIL2(); ?></td>
+                    </tr>
                 </tbody>
             </table>
-
-
         </div>
-
     </div>
-
+    <?php else:?>
+        <div class="row">
+            <div class="content">
+                <h2 style="color: white;">Cet étudiant ne possède pas de bilan 1 pour le moment...</h2>
+            </div>
+        </div>
+    <?php endif; ?>
 </section>
+<!-- about section ends -->
+
+<!-- courses section starts  -->
 
 
 
+<footer class="footer">
 
-<?php require_once 'footer.php'; ?>
+    <section>
 
 
+        <div class="credit">&copy; copyright @ 2022 by <span>PHPMASTER Group</span> | all rights reserved!</div>
+
+    </section>
+
+</footer>
+
+<!-- footer section ends -->
+<!-- swiper js link  -->
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
 <!-- custom js file link  -->

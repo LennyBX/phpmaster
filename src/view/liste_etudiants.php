@@ -3,9 +3,12 @@ require_once '../../config/appConfig.php';
 
 if(!(isset($_SESSION['user']))) {
     header("location: ../controller/connexion_control.php");
-} else {
+}
+if (isset($_SESSION['perm']) && $_SESSION['perm'] === "TUTEUR"){
     $tuteurId = $_SESSION['user']->getIDTUT();
     $etudiants = $repositoryEtudiant->getAllByTuteur($tuteurId);
+} else{
+    $etudiants = $repositoryEtudiant->getAll();
 }
 ?>
 <!DOCTYPE html>
@@ -42,7 +45,29 @@ if(!(isset($_SESSION['user']))) {
 
 <!-- header section starts  -->
 
-<?php require_once 'navbar.php'; ?>
+<header class="header">
+
+    <section class="flex">
+
+        <img src="../../public/img/FSI_logo.png" style="width: 60px">
+        <nav class="navbar">
+            <a href="../controller/accueil_control.php">Accueil</a>
+            <a href="../controller/liste_etudiants_control.php">Liste étudiants</a>
+            <?php if(isset($_SESSION['perm']) && $_SESSION['perm']=="ADMIN"){   ?>
+                <a href="../controller/administration_control.php">Paramètres</a>
+                <?php
+            }
+            else echo "";
+            ?>
+            <a href="../controller/deconnexion_control.php">Déconnexion</a>
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </section>
+
+</header>
+
 <!-- header section ends -->
 
 <!-- home section starts  -->
@@ -130,7 +155,16 @@ if(!(isset($_SESSION['user']))) {
 
 
 
-<?php require_once 'footer.php'; ?>
+<footer class="footer">
+
+    <section>
+
+
+        <div class="credit">&copy; copyright @ 2022 by <span>PHPMASTER Group</span> | all rights reserved!</div>
+
+    </section>
+
+</footer>
 
 <!-- footer section ends -->
 <!-- swiper js link  -->
