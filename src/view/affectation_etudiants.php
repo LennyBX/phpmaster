@@ -5,6 +5,9 @@ if(!(isset($_SESSION['user']))) {
 }
 
 $mesEtudiants = $repositoryEtudiant->getAll();
+$mesEtudiant3OLEN = $repositoryEtudiant->getAll3OLEN();
+$mesEtudiant4OLEN = $repositoryEtudiant->getAll4OLEN();
+$mesEtudiant5OLEN = $repositoryEtudiant->getAll5OLEN();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -94,22 +97,22 @@ $mesEtudiants = $repositoryEtudiant->getAll();
 
                 <SELECT name="liste_etudiant" size="1" class="select1">
                     <OPTION selected disabled>Choisir un Etudiant en 3OLEN</OPTION>
-                    <?php foreach ($mesEtudiants as $etudiant) { ?>
-                    <OPTION value="<?php echo $etudiant->getIDETU()?>"> <?php echo $etudiant->getPREETU() . ' ' . $etudiant->getNOMETU() ?>
+                    <?php foreach ($mesEtudiant3OLEN as $etudiant3OLEN) { ?>
+                    <OPTION value="<?php echo $etudiant3OLEN->getIDETU()?>"> <?php echo $etudiant3OLEN->getPREETU() . ' ' . $etudiant3OLEN->getNOMETU() ?>
                         <?php } ?>
                 </SELECT>
 
                 <SELECT name="liste_etudiant" size="1" class="select2">
                     <OPTION selected disabled>Choisir un Etudiant en 4OLEN</OPTION>
-                    <?php foreach ($mesEtudiants as $etudiant) { ?>
-                    <OPTION value="<?php echo $etudiant->getIDETU()?>"> <?php echo $etudiant->getPREETU() . ' ' . $etudiant->getNOMETU() ?>
+                    <?php foreach ($mesEtudiant4OLEN as $etudiant4OLEN) { ?>
+                    <OPTION value="<?php echo $etudiant4OLEN->getIDETU()?>"> <?php echo $etudiant4OLEN->getPREETU() . ' ' . $etudiant4OLEN->getNOMETU() ?>
                         <?php } ?>
                 </SELECT>
 
                 <SELECT name="liste_etudiant" size="1" class="select3">
                     <OPTION selected disabled>Choisir un Etudiant en 5OLEN</OPTION>
-                    <?php foreach ($mesEtudiants as $etudiant) { ?>
-                    <OPTION value="<?php echo $etudiant->getIDETU()?>"> <?php echo $etudiant->getPREETU() . ' ' . $etudiant->getNOMETU() ?>
+                    <?php foreach ($mesEtudiant5OLEN as $etudiant5OLEN) { ?>
+                    <OPTION value="<?php echo $etudiant5OLEN->getIDETU()?>"> <?php echo $etudiant5OLEN->getPREETU() . ' ' . $etudiant5OLEN->getNOMETU() ?>
                         <?php } ?>
                 </SELECT>
 
