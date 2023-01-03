@@ -7,6 +7,8 @@ if(!(isset($_SESSION['user']))) {
 if (isset($_SESSION['perm']) && $_SESSION['perm'] === "TUTEUR"){
     $tuteurId = $_SESSION['user']->getIDTUT();
     $etudiants = $repositoryEtudiant->getAllByTuteur($tuteurId);
+} else{
+    $etudiants = $repositoryEtudiant->getAll();
 }
 ?>
 <!DOCTYPE html>
