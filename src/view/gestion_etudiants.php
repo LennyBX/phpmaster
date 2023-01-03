@@ -122,7 +122,7 @@ if(!(isset($_SESSION['user']))) {
                         <td><?= $value->getCLAETU(); ?></td>
                         <td> <a href="../controller/infos_etudiant_control.php?idEtudiant=<?= $value->getIDETU(); ?>" style="color:floralwhite;"><img src="../../public/img/189689.png" alt="" style="width:40px"/> </a></td>
                         <td> <a href="../controller/modif_etudiant_control.php?idEtudiant=<?= $value->getIDETU(); ?>" style="color:floralwhite;"><img src="../../public/img/1160515.png" alt="" style="width:40px"/> </a></td>
-                        <td> <a href="../controller/modif_etudiant_trait_control.php?idEtudiant=<?= $value->getIDETU(); ?>&delete" style="color:floralwhite;"><img src="../../public/img/crossmark.png" alt="" style="width:40px"/> </a></td>
+                        <td> <a href="../controller/modif_etudiant_trait_control.php?idEtudiant=<?= $value->getIDETU(); ?>&delete" class="supprimer" style="color:floralwhite;"><img src="../../public/img/crossmark.png" alt="" style="width:40px"/> </a></td>
                     </tr>
                 <?php endforeach; ?>
 
@@ -157,7 +157,9 @@ if(!(isset($_SESSION['user']))) {
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
 <!-- custom js file link  -->
-<script src="js/script.js"></script>
+<script src="../scripts/script.js">
+
+</script>
 
 </body>
 </html>
