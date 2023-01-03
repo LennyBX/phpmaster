@@ -3,7 +3,8 @@ require_once '../../config/appConfig.php';
 
 if(!(isset($_SESSION['user']))) {
     header("location: ../controller/connexion_control.php");
-} else {
+}
+if (isset($_SESSION['perm']) && $_SESSION['perm'] === "TUTEUR"){
     $tuteurId = $_SESSION['user']->getIDTUT();
     $etudiants = $repositoryEtudiant->getAllByTuteur($tuteurId);
 }
