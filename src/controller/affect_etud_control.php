@@ -1,13 +1,14 @@
 <?php
 require_once '../../config/appConfig.php';
 
-if(isset($_POST['liste_etudiant'])){
+if(isset($_POST['liste_etudiant']) && isset($_SESSION['idTuteur'])){
 
     $id_etu = intval($_POST['liste_etudiant']);
-    $id_tut = $_SESSION['user']->getIDTUT();
 
 
-    if ($repositoryEtudiant->affectEtud($id_tut, $id_etu)){
+
+
+    if ($repositoryEtudiant->affectEtud($_SESSION['idTuteur'], $id_etu)){
         header('location: ../view/affectation_etudiants.php');
         $_SESSION['affect_etud'] = true;
     } else {

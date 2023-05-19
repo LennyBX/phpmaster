@@ -122,7 +122,7 @@ if(!(isset($_SESSION['user']))) {
                         <td><?php echo $value->getLOGTUT() ?></td>
                         <td> <a href="../controller/modif_tuteur_control.php?idTuteur=<?= $value->getIDTUT(); ?>" style="color:floralwhite;"><img src="../../public/img/1160515.png" alt="" style="width:40px"/> </a></td>
                         <td> <a href="../controller/modif_tuteur_trait_control.php?idTuteur=<?= $value->getIDTUT(); ?>&delete" style="color:floralwhite;"><img src="../../public/img/crossmark.png" alt="" style="width:40px"/> </a></td>
-                        <td> <a c href="affectation_etudiants.php" style="color:floralwhite;">
+                        <td> <a c href="affectation_etudiants.php?idTuteur=<?= $value->getIDTUT(); ?>" style="color:floralwhite;">
                                 &plus;</a></td>
                     </tr>
                 <?php } ?>

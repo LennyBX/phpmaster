@@ -27,6 +27,24 @@ class NOTE_1_2SIO_DAO
         return $resultSet;
     }
 
+    public function getAllapis() : ?array
+    {
+        $resultSet = NULL;
+        $req = $this->bdd->query('SELECT * FROM note1');
+
+        if ($req) {
+            $req->setFetchMode(\PDO::FETCH_ASSOC);
+            foreach ($req as $row)
+            {
+                $note1 = new NOTE_1($row);
+                $resultSet[] = $note1->getjsonformat();
+
+
+            }
+        }
+        return $resultSet;
+    }
+
     public function getById(int $id_note): ?NOTE_1 {
         $resultSet = NULL;
         $req = $this->bdd->prepare('SELECT * FROM note_1 WHERE id_not = :id_note;');

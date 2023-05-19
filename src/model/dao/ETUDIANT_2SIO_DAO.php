@@ -29,6 +29,24 @@ class ETUDIANT_2SIO_DAO
         return $resultSet;
     }
 
+    public function getAllapi() : ?array
+    {
+        $resultSet = NULL;
+        $req = $this->bdd->query('SELECT * FROM etudiant');
+
+        if ($req) {
+            $req->setFetchMode(\PDO::FETCH_ASSOC);
+            foreach ($req as $row)
+            {
+                $etudiant = new ETUDIANT($row);
+                $resultSet[] = $etudiant->getjsonformat();
+
+
+            }
+        }
+        return $resultSet;
+    }
+
     public function getById(int $id_etu): ?ETUDIANT {
         $resultSet = NULL;
         $req = $this->bdd->prepare('SELECT * FROM etudiant WHERE id_etu = :id_etu;');

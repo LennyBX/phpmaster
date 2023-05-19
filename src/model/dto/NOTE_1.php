@@ -32,6 +32,13 @@ class NOTE_1
         $this->NOT_ENT_NOT = $tab['NOT_ENT_NOT'];
     }
 
+    public function getjsonformat(){
+
+        return array("ID_NOT_1"=>$this->getIDNOT1(),"REM_NOT_BIL_1"=>$this->getREMNOTBIL1(),"DAT_BIL_1"=>$this->getDATBIL1(),"NOT_ORA_NOT"=>$this->getNOTENTNOT(),"NOT_DOS_NOT"=>$this->getNOTDOSNOT(),
+            "NOT_ENT_NOT"=>$this->getNOTENTNOT());
+
+    }
+
     /**
      * @return mixed
      */

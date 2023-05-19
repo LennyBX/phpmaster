@@ -4,10 +4,12 @@
 namespace model\dto;
 
 use model\dao\ETUDIANT_2SIO_DAO;
+header('Access-Control-Allow-Origin: *');
 
 
 class ETUDIANT
 {
+
     private $ID_ETU;
     private $PRE_ETU;
     private $NOM_ETU;
@@ -25,6 +27,16 @@ class ETUDIANT
     private $ID_NOT_ETU;
     private $ID_TUT_ETU;
 
+
+    public function getjsonformat(){
+
+        return array("ID_ETU"=>$this->getIDETU(),"NOM_ETU"=>$this->getNOMETU(),"PRE_ETU"=>$this->getPREETU(),"MAI_ETU"=>$this->getMAIETU(),"RUE_ETU"=>$this->getRUEETU(),
+            "CP_ETU"=>$this->getCPETU(),"VIL_ETU"=>$this->getVILETU(),"TEL_ETU"=>$this->getTELETU(),"CLA_ETU"=>$this->getCLAETU()
+            ,"SPE_ETU"=>$this->getSPEETU(),"LOG_ETU"=>$this->getLOGETU(),"MDP_ETU"=>$this->getMDPETU(),"ID_TUT_ETU"=>$this->getIDTUTETU(),"ID_ENT_ETU;"=>$this->getIDENTETU(), "ID_NOT_ETU"=>$this->getIDNOTETU(), "ID_NOT_1" => null,"REM_NOT_BIL_1"=>null,"DAT_BIL_1"=>null,"NOT_ORA_NOT"=>null,"NOT_DOS_NOT"=> null,
+            "NOT_ENT_NOT"=>null, "ID_NOT_2"=> null,"REM_NOT_BIL_2"=> null,"DAT_NOT_BIL_2"=>null,"NOT_DOS_BIL_2"=> null,"NOT_ENT_NOT_BIL_2"=>null,
+            "NOT_ORA_BIL_2"=>null);
+
+    }
     /**
      * @param $ID_ETU
      * @param $PRE_ETU

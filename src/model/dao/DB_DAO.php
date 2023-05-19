@@ -49,6 +49,28 @@ class DB_DAO
         return false;
     }
 
+    public function login(String $login, String $mdp): array{
+
+        $query_prepare = $this->bdd->prepare('SELECT * from etudiant where LOG_ETU = :login');
+        $query_prepare->execute([
+            ':login' => $login
+        ]);
+
+        $result = $query_prepare->fetch(\PDO::FETCH_ASSOC);
+
+        if( $result != 0 ) {
+            $mdp_hash = $result['MDP_ETU'];
+            if ($mdp == $mdp_hash){
+                return $result;
+            } else{
+                return ["ID_ETU" => -101]; //mauvais mot de passe
+            }
+        }else{
+            return ["ID_ETU" => -102]; //mauvais login
+        }
+    }
+
+
 }
 
 

@@ -32,6 +32,13 @@ class NOTE_2
         $this->NOT_ORA_BIL_2 = $tab['NOT_ORA_BIL_2'];
     }
 
+
+    public function getjsonformat(){
+
+        return array("ID_NOT_2"=>$this->getIDNOT2(),"REM_NOT_BIL_2"=>$this->getREMNOTBIL2(),"DAT_NOT_BIL_2"=>$this->getDATNOTBIL2(),"NOT_DOS_BIL_2"=>$this->getNOTDOSBIL2(),"NOT_ENT_NOT_BIL_2"=>$this->getNOTENTNOTBIL2(),
+            "NOT_ORA_BIL_2"=>$this->getNOTORABIL2());
+
+    }
     /**
      * @return mixed
      */

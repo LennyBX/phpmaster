@@ -1,7 +1,14 @@
 <?php
-require_once '../../config/appConfig.php';
+include_once '../../config/appConfig.php';
+
 if(!(isset($_SESSION['user']))) {
     header("location: ../controller/connexion_control.php");
+
+}elseif (isset($_SESSION['perm']) && $_SESSION['perm'] !== "ADMIN"){
+    header("location: ../controller/connexion_control.php");
+}
+if(isset($_GET['idTuteur'])){
+    $_SESSION['idTuteur'] = intval($_GET['idTuteur']);
 }
 
 $mesEtudiants = $repositoryEtudiant->getAll();
